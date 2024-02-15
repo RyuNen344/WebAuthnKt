@@ -1,0 +1,36 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "com.gradle.enterprise" version "3.16.2"
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = System.getenv("CI") != null ? "yes" : "no"
+    }
+}
+
+rootProject.name = "WebAuthnKt"
+include(
+    ":webauthn2-json-moshi",
+    ":webauthn2-json-moshi-annotation",
+    ":webauthn2-json-serialization",
+    ":webauthn2-json-serialization-annotation"
+)

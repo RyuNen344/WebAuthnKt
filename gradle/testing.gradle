@@ -1,0 +1,60 @@
+pluginManager.apply("jacoco")
+
+android {
+    defaultConfig {
+        testOptions.unitTests {
+            includeAndroidResources = true
+            all {
+                jacoco {
+                    includeNoLocationClasses = true
+                    excludes = ['jdk.internal.*']
+                }
+            }
+        }
+    }
+}
+
+androidComponents {
+    beforeVariants(selector().withName("release")) { variantBuilder ->
+        variantBuilder.enableAndroidTest = false
+        variantBuilder.enableUnitTest = false
+        variantBuilder.enableTestFixtures = false
+    }
+}
+
+jacoco.toolVersion = "0.8.11"
+
+tasks.register("jacoco", JacocoReport) {
+    group = "verification"
+    reports {
+        xml.required = true
+    }
+    sourceDirectories.from.addAll(
+        rootProject.layout.projectDirectory.dir("webauthn2-json-core/src/main/java"),
+        layout.projectDirectory.dir("src/main/java"),
+        layout.buildDirectory.dir("generated/ksp/debug/java"),
+        layout.buildDirectory.dir("generated/ksp/debug/kotlin"),
+    )
+    classDirectories.from.addAll(
+        layout.buildDirectory.dir("tmp/kotlin-classes/debug"),
+        layout.buildDirectory.dir("intermediates/javac/debug"),
+    )
+    executionData.from.addAll(
+        layout.buildDirectory.asFileTree.matching {
+            include("**/*.ec", "**/*.exec")
+        }
+    )
+}
+
+dependencies {
+    testImplementation libs.androidx.test.ext.junit
+    testImplementation libs.androidx.test.ext.truth
+    testImplementation libs.com.google.truth.truth
+    testImplementation libs.com.google.truth.extensions.truth.java8
+    testImplementation libs.jackson.databind
+    testImplementation libs.jsonassert
+    testImplementation libs.junit
+    testImplementation libs.kotlin.test
+    testImplementation libs.nl.jqno.equalsverifier.equalsverifier
+    testImplementation libs.org.robolectric.robolectric
+}

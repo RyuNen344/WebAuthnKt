@@ -1,0 +1,7 @@
+androidComponents {
+    beforeVariants(selector()) { variantBuilder ->
+        variantBuilder.enableAndroidTest = false
+        variantBuilder.enableUnitTest = false
+        variantBuilder.enableTestFixtures = false
+    }
+}
