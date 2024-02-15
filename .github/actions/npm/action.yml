@@ -1,0 +1,14 @@
+name: "setup npm"
+description: "setup npm"
+runs:
+  using: "composite"
+  steps:
+    - name: setup npm
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: '.node-version'
+
+    - name: install packages
+      shell: bash
+      run: |
+        npm ci

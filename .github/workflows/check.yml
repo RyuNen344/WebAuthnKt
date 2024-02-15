@@ -1,0 +1,108 @@
+name: check
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  merge_group:
+    types: [ checks_requested ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qodana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: JetBrains/qodana-action@v2023.3
+        with:
+          cache-default-branch-only: true
+
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+      - name: check publish task
+        shell: bash
+        run: |
+          ./gradlew publishReleasePublicationToLocalRepository --scan
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        module: [ "webauthn2-json-moshi", "webauthn2-json-serialization" ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+      - name: unit test
+        shell: bash
+        run: |
+          ./gradlew :${{ matrix.module }}:testDebugUnitTest --scan
+      - uses: EnricoMi/publish-unit-test-result-action@v2
+        if: ${{ !cancelled() }}
+        with:
+          check_name: ${{ matrix.module }}
+          files: |
+            **/test-results/**/*.xml
+      - name: jacoco
+        if: ${{ !cancelled() }}
+        shell: bash
+        run: |
+          ./gradlew :${{ matrix.module }}:jacoco --scan
+      - uses: madrapps/jacoco-report@v1.6.1
+        if: ${{ !cancelled() }}
+        with:
+          paths: |
+            ${{ github.workspace }}/${{ matrix.module }}/build/reports/jacoco/jacoco/jacoco.xml
+          title: ${{ matrix.module }}
+          update-comment: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          min-coverage-overall: 0
+          min-coverage-changed-files: 0
+
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+      - name: check api file
+        shell: bash
+        run: |
+          ./gradlew apiCheck --scan
+
+  fixture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/npm
+      - name: config git
+        shell: bash
+        run: |
+          git config --global user.name "github-actions[bot]" && git config --global user.email github-actions-bot@users.noreply.github.com
+      - name: re-generate fixture json
+        shell: bash
+        run: |
+          rm -f ./webauthn2-json-core/src/test/resources/*.json;
+          npm run exec;
+          cp -f ./fixture/json/*.json ./webauthn2-json-core/src/test/resources;
+          git add .;
+      - name: check fixture diff
+        shell: bash
+        run: |
+          if [ "$(git status --porcelain | wc -l)" -gt 0 ]; then
+            echo "::error::Fixture json files are not up-to-date. Please run 'npm run exec' and commit the changes";
+            echo "$(git status --porcelain)" | while read -r l; do echo "::error::$l"; done;
+            exit 1
+          else
+            echo "::notice::Fixture json files are up-to-date";
+          fi

@@ -1,0 +1,31 @@
+name: "setup gradle"
+description: "setup gradle"
+runs:
+  using: "composite"
+  steps:
+    - name: setup JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: "temurin"
+        java-version: "17"
+
+    - name: setup gradle cache limit
+      shell: bash
+      run: |
+        mkdir -p ~/.gradle/init.d \;
+        \cp -rf ./gradle/cache-settings.gradle ~/.gradle/init.d \;
+
+    - name: validate wrapper
+      uses: gradle/wrapper-validation-action@v2
+
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v3
+      with:
+        gradle-version: wrapper
+        gradle-home-cache-cleanup: true
+        dependency-graph: generate-and-submit
+
+    - name: list toolchain
+      shell: bash
+      run: |
+        ./gradlew -q javaToolchains
