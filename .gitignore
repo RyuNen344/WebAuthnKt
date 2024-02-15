@@ -1,0 +1,61 @@
+.DS_Store
+
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+*.log
+*.iml
+.idea/androidTestResultsUserPreferences.xml
+.idea/compiler.xml
+.idea/.name
+.idea/git_toolbox_prj.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/kotlinc.xml
+.idea/migrations.xml
+.idea/markdown.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/$CACHE_FILE$
+.idea/runConfigurations.xml
+.idea/caches
+.idea/modules.xml
+.idea/navEditor.xml
+
+bin/
+gen/
+out/
+.gradle/
+build/
+releases/
+local.properties
+
+# ci
+artifact/
+artifact.zip
+
+# oas
+.openapi-generator
+.openapi-generator-ignore
+
+# bundler
+.bundle/vendor
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# node
+node_modules/
+fixture/json/*.json
