@@ -1,0 +1,8 @@
+{
+  "origin": "https://github.com/RyuNen344/WebAuthnKt",
+  "challenge": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9",
+  "type": "webauthn.get",
+  "tokenBinding": {
+    "status": "supported"
+  }
+}

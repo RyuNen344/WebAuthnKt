@@ -1,0 +1,13 @@
+{
+  "boolean": true,
+  "number": 1,
+  "string": "string",
+  "array": [
+    1,
+    2,
+    3
+  ],
+  "object": {
+    "key": "value"
+  }
+}
