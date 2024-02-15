@@ -1,0 +1,13 @@
+public abstract interface annotation class com/squareup/moshi/Json : java/lang/annotation/Annotation {
+	public abstract fun ignore ()Z
+	public abstract fun name ()Ljava/lang/String;
+}
+
+public abstract interface annotation class com/squareup/moshi/JsonClass : java/lang/annotation/Annotation {
+	public abstract fun generateAdapter ()Z
+	public abstract fun generator ()Ljava/lang/String;
+}
+
+public abstract interface annotation class io/github/ryunen344/webauthn2/json/moshi/annotation/UndefinedToNull : java/lang/annotation/Annotation {
+}
+

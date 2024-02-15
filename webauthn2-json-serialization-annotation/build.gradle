@@ -1,0 +1,14 @@
+plugins {
+    alias libs.plugins.com.android.library
+    alias libs.plugins.org.jetbrains.kotlin.android
+    alias libs.plugins.org.jetbrains.kotlinx.compatibility
+}
+
+apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/annotation.gradle")
+
+android.namespace = "io.github.ryunen344.webauthn2.json.serialization.annotation"
+
+dependencies {
+    implementation libs.kotlinx.serialization.json
+}

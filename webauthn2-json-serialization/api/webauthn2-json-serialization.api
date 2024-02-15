@@ -1,0 +1,755 @@
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRead ()Ljava/lang/Boolean;
+	public final fun getSupport ()Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public final fun getWrite ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs$Companion;
+	public fun <init> (Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/lang/Boolean;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBlob ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getSupported ()Ljava/lang/Boolean;
+	public final fun getWritten ()Ljava/lang/Boolean;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse : io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthenticatorData ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun getClientDataJSON ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getSignature ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getUserHandle ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse : io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAttestationObject ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getAuthenticatorData ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun getClientDataJSON ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getPublicKey ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getPublicKeyAlgorithm ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getTransports ()Ljava/util/List;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract class io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/AuthenticatorResponse$Companion;
+	public synthetic fun <init> (ILkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public abstract fun getClientDataJSON ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public static final synthetic fun write$Self (Lio/github/ryunen344/webauthn2/json/core/AuthenticatorResponse;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthenticatorAttachment ()Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public final fun getRequireResidentKey ()Ljava/lang/Boolean;
+	public final fun getResidentKey ()Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public final fun getUserVerification ()Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/Base64URLString {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/Base64URLString$Companion;
+	public fun <init> ([B)V
+	public static final fun decode (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public static final fun encode (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()[B
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/Base64URLString$Companion {
+	public final fun decode (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun encode (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)Ljava/lang/String;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier$Companion;
+	public fun <init> (I)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier$Companion {
+	public final fun getES256 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getES384 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getES512 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getEdDSA ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getRS256 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getRS384 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getRS512 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CollectedClientData {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/CollectedClientData$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/DOMString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/DOMString;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/TokenBinding;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChallenge ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getCrossOrigin ()Ljava/lang/Boolean;
+	public final fun getOrigin ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getTokenBinding ()Lio/github/ryunen344/webauthn2/json/core/TokenBinding;
+	public final fun getType ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CollectedClientData$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/CollectedClientData$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/CollectedClientData;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/CollectedClientData;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CollectedClientData$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput$Companion;
+	public fun <init> (Ljava/lang/Boolean;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRk ()Ljava/lang/Boolean;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/DOMString : java/lang/Comparable {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/DOMString$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public fun compareTo (Lio/github/ryunen344/webauthn2/json/core/DOMString;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/DOMString$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions$Companion;
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;Lkotlin/ULong;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;Lkotlin/ULong;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAttestation ()Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public final fun getAuthenticatorSelection ()Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;
+	public final fun getChallenge ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getExcludeCredentials ()Ljava/util/List;
+	public final fun getExtensions ()Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;
+	public final fun getPubKeyCredParams ()Ljava/util/List;
+	public final fun getRp ()Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;
+	public final fun getTimeout-6VbMDqA ()Lkotlin/ULong;
+	public final fun getUser ()Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getTransports ()Ljava/util/List;
+	public final fun getType ()Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity$Companion;
+	public synthetic fun <init> (ILkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public abstract fun getName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public static final synthetic fun write$Self (Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlg ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getType ()Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions$Companion;
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lkotlin/ULong;Lio/github/ryunen344/webauthn2/json/core/DOMString;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lkotlin/ULong;Lio/github/ryunen344/webauthn2/json/core/DOMString;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAllowCredentials ()Ljava/util/List;
+	public final fun getChallenge ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getExtensions ()Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;
+	public final fun getRpId ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getTimeout-6VbMDqA ()Lkotlin/ULong;
+	public final fun getUserVerification ()Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity : io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/DOMString;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun getName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity : io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/DOMString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDisplayName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun getName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/TokenBinding {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/TokenBinding$Companion;
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getStatus ()Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/TokenBinding$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lio/github/ryunen344/webauthn2/json/core/TokenBinding$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/TokenBinding;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/TokenBinding;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/TokenBinding$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/UvmEntries {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/UvmEntries$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/List;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/UvmEntries$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/UvmEntry {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/UvmEntry$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/List;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/UvmEntry$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs$Companion;
+	public fun <init> (Ljava/util/Map;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/Map;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs$Companion {
+	public final fun getReserved ()Ljava/util/List;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs$Companion;
+	public fun <init> (Ljava/util/Map;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/Map;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs$Companion {
+	public final fun getReserved ()Ljava/util/List;
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference$Companion;
+	public static final field Direct Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field Enterprise Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field Indirect Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field None Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment$Companion;
+	public static final field CrossPlatform Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static final field Platform Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport : java/lang/Enum {
+	public static final field Ble Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport$Companion;
+	public static final field Internal Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Nfc Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Usb Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport$Companion;
+	public static final field Preferred Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public static final field Required Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType$Companion;
+	public static final field PublicKey Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement$Companion;
+	public static final field Discouraged Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static final field Preferred Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static final field Required Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus$Companion;
+	public static final field Present Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static final field Supported Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement : java/lang/Enum {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement$Companion;
+	public static final field Discouraged Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static final field Preferred Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static final field Required Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/partial/AuthenticationExtensionsClientInputsKt {
+	public static final fun getAppid (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public static final fun getAppidExclude (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public static final fun getCredProps (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Ljava/lang/Boolean;
+	public static final fun getLargeBlob (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs;
+	public static final fun getUvm (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Ljava/lang/Boolean;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/partial/AuthenticationExtensionsClientOutputsKt {
+	public static final fun getAppid (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Ljava/lang/Boolean;
+	public static final fun getAppidExclude (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Ljava/lang/Boolean;
+	public static final fun getCredProps (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput;
+	public static final fun getLargeBlob (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs;
+	public static final fun getUvm (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Lio/github/ryunen344/webauthn2/json/core/UvmEntries;
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AttestationConveyancePreferenceSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticationExtensionsClientInputsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticationExtensionsClientOutputsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticatorAttachmentSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticatorSelectionCriteriaSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticatorTransportSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/Base64URLStringSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/COSEAlgorithmIdentifierSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/DOMStringSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/LargeBlobSupportSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/PublicKeyCredentialCreationOptionsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/PublicKeyCredentialRequestOptionsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/PublicKeyCredentialTypeSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/ResidentKeyRequirementSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/TokenBindingStatusSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/UserVerificationRequirementSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/UvmEntriesSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/UvmEntries;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/UvmEntries;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/UvmEntrySerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lio/github/ryunen344/webauthn2/json/core/UvmEntry;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lio/github/ryunen344/webauthn2/json/core/UvmEntry;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
