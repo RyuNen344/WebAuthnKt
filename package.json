@@ -1,0 +1,15 @@
+{
+  "name": "webauthn-kotlin",
+  "scripts": {
+    "exec": "ts-node ./fixture/index.ts"
+  },
+  "devDependencies": {
+    "@github/webauthn-json": "^2.1.1",
+    "@simplewebauthn/server": "^9.0.2",
+    "@simplewebauthn/types": "^9.0.1",
+    "@types/node": "^20.11.17",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
