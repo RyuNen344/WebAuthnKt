@@ -1,0 +1,83 @@
+public final class io/github/ryunen344/webauthn2/json/serialization/AttestationConveyancePreferenceSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticationExtensionsClientInputsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticationExtensionsClientOutputsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticatorAttachmentSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticatorSelectionCriteriaSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/AuthenticatorTransportSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/Base64URLStringSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/COSEAlgorithmIdentifierSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/DOMStringSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/LargeBlobSupportSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/PublicKeyCredentialCreationOptionsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/PublicKeyCredentialRequestOptionsSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/PublicKeyCredentialTypeSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/ResidentKeyRequirementSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/TokenBindingStatusSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/UserVerificationRequirementSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/UvmEntriesSerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public final class io/github/ryunen344/webauthn2/json/serialization/UvmEntrySerializer : kotlinx/serialization/KSerializer {
+	public fun <init> ()V
+}
+
+public abstract interface class kotlinx/serialization/KSerializer {
+}
+
+public abstract interface annotation class kotlinx/serialization/SerialName : java/lang/annotation/Annotation {
+	public abstract fun value ()Ljava/lang/String;
+}
+
+public abstract interface annotation class kotlinx/serialization/Serializable : java/lang/annotation/Annotation {
+	public abstract fun with ()Ljava/lang/Class;
+}
+

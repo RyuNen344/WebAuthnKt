@@ -1,0 +1,597 @@
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRead ()Ljava/lang/Boolean;
+	public final fun getSupport ()Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public final fun getWrite ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputsJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs {
+	public fun <init> (Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/lang/Boolean;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBlob ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getSupported ()Ljava/lang/Boolean;
+	public final fun getWritten ()Ljava/lang/Boolean;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputsJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse : io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthenticatorData ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun getClientDataJSON ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getSignature ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getUserHandle ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponseJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAssertionResponse;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse : io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAttestationObject ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getAuthenticatorData ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun getClientDataJSON ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getPublicKey ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getPublicKeyAlgorithm ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getTransports ()Ljava/util/List;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponseJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorAttestationResponse;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract class io/github/ryunen344/webauthn2/json/core/AuthenticatorResponse {
+	public abstract fun getClientDataJSON ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthenticatorAttachment ()Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public final fun getRequireResidentKey ()Ljava/lang/Boolean;
+	public final fun getResidentKey ()Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public final fun getUserVerification ()Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteriaJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/Base64URLString {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/Base64URLString$Companion;
+	public fun <init> ([B)V
+	public static final fun decode (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public static final fun encode (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()[B
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/Base64URLString$Companion {
+	public final fun decode (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun encode (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier$Companion;
+	public fun <init> (I)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier$Companion {
+	public final fun getES256 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getES384 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getES512 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getEdDSA ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getRS256 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getRS384 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getRS512 ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CollectedClientData {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/DOMString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/DOMString;Ljava/lang/Boolean;Lio/github/ryunen344/webauthn2/json/core/TokenBinding;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChallenge ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getCrossOrigin ()Ljava/lang/Boolean;
+	public final fun getOrigin ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getTokenBinding ()Lio/github/ryunen344/webauthn2/json/core/TokenBinding;
+	public final fun getType ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CollectedClientDataJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/CollectedClientData;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/CollectedClientData;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput {
+	public fun <init> (Ljava/lang/Boolean;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRk ()Ljava/lang/Boolean;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutputJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/DOMString : java/lang/Comparable {
+	public fun <init> (Ljava/lang/String;)V
+	public fun compareTo (Lio/github/ryunen344/webauthn2/json/core/DOMString;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions {
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;Lkotlin/ULong;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;Lkotlin/ULong;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAttestation ()Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public final fun getAuthenticatorSelection ()Lio/github/ryunen344/webauthn2/json/core/AuthenticatorSelectionCriteria;
+	public final fun getChallenge ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getExcludeCredentials ()Ljava/util/List;
+	public final fun getExtensions ()Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;
+	public final fun getPubKeyCredParams ()Ljava/util/List;
+	public final fun getRp ()Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;
+	public final fun getTimeout-6VbMDqA ()Lkotlin/ULong;
+	public final fun getUser ()Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptionsJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialCreationOptions;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Ljava/util/List;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getTransports ()Ljava/util/List;
+	public final fun getType ()Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptorJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialDescriptor;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity {
+	public abstract fun getName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlg ()Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun getType ()Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParametersJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialParameters;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions {
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lkotlin/ULong;Lio/github/ryunen344/webauthn2/json/core/DOMString;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lkotlin/ULong;Lio/github/ryunen344/webauthn2/json/core/DOMString;Ljava/util/List;Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAllowCredentials ()Ljava/util/List;
+	public final fun getChallenge ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun getExtensions ()Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;
+	public final fun getRpId ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getTimeout-6VbMDqA ()Lkotlin/ULong;
+	public final fun getUserVerification ()Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptionsJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRequestOptions;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity : io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/DOMString;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun getName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntityJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialRpEntity;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity : io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialEntity {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/DOMString;Lio/github/ryunen344/webauthn2/json/core/Base64URLString;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDisplayName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public fun getName ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntityJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/PublicKeyCredentialUserEntity;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/TokenBinding {
+	public fun <init> (Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;Lio/github/ryunen344/webauthn2/json/core/DOMString;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun getStatus ()Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/TokenBindingJsonAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/TokenBinding;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/TokenBinding;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/UvmEntries {
+	public fun <init> (Ljava/util/List;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/List;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/UvmEntry {
+	public fun <init> (Ljava/util/List;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/List;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs$Companion;
+	public fun <init> (Ljava/util/Map;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/Map;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs$Companion {
+	public final fun getReserved ()Ljava/util/List;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs {
+	public static final field Companion Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs$Companion;
+	public fun <init> (Ljava/util/Map;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/util/Map;
+	public fun hashCode ()I
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs$Companion {
+	public final fun getReserved ()Ljava/util/List;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference : java/lang/Enum {
+	public static final field Direct Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field Enterprise Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field Indirect Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field None Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment : java/lang/Enum {
+	public static final field CrossPlatform Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static final field Platform Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport : java/lang/Enum {
+	public static final field Ble Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Internal Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Nfc Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static final field Usb Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport : java/lang/Enum {
+	public static final field Preferred Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public static final field Required Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType : java/lang/Enum {
+	public static final field PublicKey Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement : java/lang/Enum {
+	public static final field Discouraged Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static final field Preferred Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static final field Required Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus : java/lang/Enum {
+	public static final field Present Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static final field Supported Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement : java/lang/Enum {
+	public static final field Discouraged Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static final field Preferred Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static final field Required Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static final field Unknown Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public static fun values ()[Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/partial/AuthenticationExtensionsClientInputsKt {
+	public static final fun getAppid (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public static final fun getAppidExclude (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public static final fun getCredProps (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Ljava/lang/Boolean;
+	public static final fun getLargeBlob (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobInputs;
+	public static final fun getUvm (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)Ljava/lang/Boolean;
+}
+
+public final class io/github/ryunen344/webauthn2/json/core/partial/AuthenticationExtensionsClientOutputsKt {
+	public static final fun getAppid (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Ljava/lang/Boolean;
+	public static final fun getAppidExclude (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Ljava/lang/Boolean;
+	public static final fun getCredProps (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Lio/github/ryunen344/webauthn2/json/core/CredentialPropertiesOutput;
+	public static final fun getLargeBlob (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Lio/github/ryunen344/webauthn2/json/core/AuthenticationExtensionsLargeBlobOutputs;
+	public static final fun getUvm (Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)Lio/github/ryunen344/webauthn2/json/core/UvmEntries;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AttestationConveyancePreferenceAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/AttestationConveyancePreference;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AuthenticationExtensionsClientInputsAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientInputs;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AuthenticationExtensionsClientInputsAdapter$Factory : com/squareup/moshi/JsonAdapter$Factory {
+	public fun <init> ()V
+	public fun create (Ljava/lang/reflect/Type;Ljava/util/Set;Lcom/squareup/moshi/Moshi;)Lcom/squareup/moshi/JsonAdapter;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AuthenticationExtensionsClientOutputsAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> (Lcom/squareup/moshi/Moshi;)V
+	public fun fromJson (Lcom/squareup/moshi/JsonReader;)Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/dict/AuthenticationExtensionsClientOutputs;)V
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AuthenticationExtensionsClientOutputsAdapter$Factory : com/squareup/moshi/JsonAdapter$Factory {
+	public fun <init> ()V
+	public fun create (Ljava/lang/reflect/Type;Ljava/util/Set;Lcom/squareup/moshi/Moshi;)Lcom/squareup/moshi/JsonAdapter;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AuthenticatorAttachmentAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorAttachment;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/AuthenticatorTransportAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/AuthenticatorTransport;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/Base64URLStringAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/Base64URLString;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/Base64URLString;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/COSEAlgorithmIdentifierAdapter {
+	public fun <init> ()V
+	public final fun fromJson (I)Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/COSEAlgorithmIdentifier;)I
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/DOMStringAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/DOMString;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/DOMString;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/LargeBlobSupportAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/LargeBlobSupport;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/PublicKeyCredentialTypeAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/PublicKeyCredentialType;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/ResidentKeyRequirementAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/ResidentKeyRequirement;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/TokenBindingStatusAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/TokenBindingStatus;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/ULongAdapter : com/squareup/moshi/JsonAdapter {
+	public fun <init> ()V
+	public synthetic fun fromJson (Lcom/squareup/moshi/JsonReader;)Ljava/lang/Object;
+	public fun fromJson-I7RO_PI (Lcom/squareup/moshi/JsonReader;)J
+	public synthetic fun toJson (Lcom/squareup/moshi/JsonWriter;Ljava/lang/Object;)V
+	public fun toJson-Zf_Lc9A (Lcom/squareup/moshi/JsonWriter;Lkotlin/ULong;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/UndefinedToNullJsonFactory : com/squareup/moshi/JsonAdapter$Factory {
+	public fun <init> ()V
+	public fun create (Ljava/lang/reflect/Type;Ljava/util/Set;Lcom/squareup/moshi/Moshi;)Lcom/squareup/moshi/JsonAdapter;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/UserVerificationRequirementAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Ljava/lang/String;)Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;
+	public final fun toJson (Lio/github/ryunen344/webauthn2/json/core/enum/UserVerificationRequirement;)Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/UvmEntriesAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Lcom/squareup/moshi/JsonReader;Lcom/squareup/moshi/JsonAdapter;)Lio/github/ryunen344/webauthn2/json/core/UvmEntries;
+	public final fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/UvmEntries;Lcom/squareup/moshi/JsonAdapter;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/UvmEntryAdapter {
+	public fun <init> ()V
+	public final fun fromJson (Lcom/squareup/moshi/JsonReader;Lcom/squareup/moshi/JsonAdapter;)Lio/github/ryunen344/webauthn2/json/core/UvmEntry;
+	public final fun toJson (Lcom/squareup/moshi/JsonWriter;Lio/github/ryunen344/webauthn2/json/core/UvmEntry;Lcom/squareup/moshi/JsonAdapter;)V
+}
+
+public final class io/github/ryunen344/webauthn2/json/moshi/WebAuthnAdapterHelper {
+	public fun <init> ()V
+	public final fun addAttestationConveyancePreferenceAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addAuthenticationExtensionsClientInputsAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addAuthenticationExtensionsClientOutputsAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addAuthenticatorAttachmentAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addAuthenticatorTransportAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addBase64URLStringAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addCOSEAlgorithmIdentifierAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addDOMStringAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addLargeBlobSupportAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addPublicKeyCredentialTypeAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addResidentKeyRequirementAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addTokenBindingStatusAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addULongAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addUndefinedToNullJsonFactory (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addUserVerificationRequirementAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addUvmEntriesAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun addUvmEntryAdapter (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+	public final fun setup (Lcom/squareup/moshi/Moshi$Builder;)Lcom/squareup/moshi/Moshi$Builder;
+}
+
+public abstract interface annotation class io/github/ryunen344/webauthn2/json/moshi/annotation/UndefinedToNull : java/lang/annotation/Annotation {
+}
+
