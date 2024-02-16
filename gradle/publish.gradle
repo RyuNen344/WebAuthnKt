@@ -7,9 +7,6 @@ if (localPropertyFile.exists()) {
     localProperty.load(localPropertyFile.newDataInputStream())
 }
 
-group = "io.github.ryunen344.webauthn"
-version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.orNull?.trim() ?: "snapshot"
-
 publishing {
     publications {
         release(MavenPublication) {
@@ -39,6 +36,9 @@ publishing {
             }
 
             afterEvaluate {
+                groupId "io.github.ryunen344.webauthn"
+                artifactId project.name
+                version providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.orNull?.trim() ?: "snapshot"
                 from components.release
             }
         }
