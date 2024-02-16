@@ -61,7 +61,7 @@ you need to use WebAuthnAdapterHelper to setup moshi
 ```kotlin 
 val moshi = Moshi.Builder().apply(WebAuthnAdapterHelper()::setup).build()
 val adapter = moshi.adapter(PublicKeyCredentialCreationOptions::class.java)
-val json = adapter.fromJson(CredentialCreationOptionsJSON)
+val json = adapter.fromJson(PublicKeyCredentialCreationOptionsJSON)
 ```
 
 ### kotlinx.serialization
