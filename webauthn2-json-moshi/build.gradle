@@ -12,6 +12,10 @@ apply from: rootProject.layout.projectDirectory.file("gradle/testing.gradle")
 android {
     namespace = "io.github.ryunen344.webauthn2.json.moshi"
     sourceSets {
+        release {
+            java.srcDir(layout.buildDirectory.dir("generated/ksp/release/kotlin"))
+            resources.srcDir(layout.buildDirectory.dir("generated/ksp/release/resources"))
+        }
         main {
             java.srcDir(rootProject.layout.projectDirectory.dir("webauthn2-json-core/src/main/java"))
             resources.srcDir(rootProject.layout.projectDirectory.dir("webauthn2-json-core/src/main/resources"))
