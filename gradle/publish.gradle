@@ -10,43 +10,42 @@ if (localPropertyFile.exists()) {
 group = "io.github.ryunen344.webauthn"
 version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.orNull?.trim() ?: "snapshot"
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            pom {
-                name.set(project.findProperty("POM_NAME"))
-                description.set(project.findProperty("POM_DESCRIPTION"))
-                url.set("https://github.com/RyuNen344/WebAuthnKt")
-                licenses {
-                    license {
-                        name.set("Apache License 2.0")
-                        url.set("https://github.com/RyuNen344/WebAuthnKt/blob/main/LICENSE")
-                        distribution.set("repo")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("RyuNen344")
-                        name.set("RyuNen344")
-                        email.set("s1100633@outlook.com")
-                    }
-                }
-                scm {
-                    connection.set("scm:git://github.com/RyuNen344/WebAuthnKt.git")
-                    developerConnection.set("scm:git:ssh://github.com/RyuNen344/WebAuthnKt.git")
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                pom {
+                    name.set(project.findProperty("POM_NAME"))
+                    description.set(project.findProperty("POM_DESCRIPTION"))
                     url.set("https://github.com/RyuNen344/WebAuthnKt")
+                    licenses {
+                        license {
+                            name.set("Apache License 2.0")
+                            url.set("https://github.com/RyuNen344/WebAuthnKt/blob/main/LICENSE")
+                            distribution.set("repo")
+                        }
+                    }
+                    developers {
+                        developer {
+                            id.set("RyuNen344")
+                            name.set("RyuNen344")
+                            email.set("s1100633@outlook.com")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git://github.com/RyuNen344/WebAuthnKt.git")
+                        developerConnection.set("scm:git:ssh://github.com/RyuNen344/WebAuthnKt.git")
+                        url.set("https://github.com/RyuNen344/WebAuthnKt")
+                    }
                 }
-            }
-
-            afterEvaluate {
                 from components.release
             }
         }
-    }
-    repositories {
-        maven {
-            name = "Local"
-            setUrl(rootProject.layout.projectDirectory.dir("releases/maven"))
+        repositories {
+            maven {
+                name = "Local"
+                setUrl(rootProject.layout.projectDirectory.dir("releases/maven"))
+            }
         }
     }
 }
