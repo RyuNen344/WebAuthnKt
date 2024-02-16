@@ -44,10 +44,10 @@ set your `build.gradle` like below
 ```groovy:settings.gradle
 dependencies {
     // moshi
-    implementation 'io.github.ryunen344.webauthn:webauthn2-json-moshi:${version}'
+    implementation 'com.github.RyuNen344.WebAuthnKt:webauthn2-json-moshi:${version}'
     
     // kotlinx.serialization
-    implementation 'io.github.ryunen344.webauthn:webauthn2-json-serialization:${version}'
+    implementation 'com.github.RyuNen344.WebAuthnKt:webauthn2-json-serialization:${version}'
 }
 ```
 
