@@ -1,5 +1,7 @@
 # WebAuthnKt
 
+[![jitpack](https://jitpack.io/v/RyuNen344/WebAuthnKt.svg)](https://jitpack.io/#RyuNen344/WebAuthnKt)
+
 Pure pre-implementation
 of [Web Authentication: An API for accessing Public Key Credentials Level 2](https://www.w3.org/TR/webauthn-2/)</br>
 This library allows you to use WebAuthn JSON without self-implementation.</br>
