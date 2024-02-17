@@ -1,0 +1,43 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          default-branch: main
+          release-type: simple
+          package-name: release-please-action
+          include-v-in-tag: false
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: ./.github/actions/gradle
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: ./.github/actions/konan
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: nick-fields/retry@v3
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          PGP_KEY_ID: ${{ secrets.PGP_KEY_ID }}
+          PGP_SIGNING_KEY: ${{ secrets.PGP_SIGNING_KEY }}
+          PGP_SIGNING_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
+        with:
+          max_attempts: 3
+          retry_on: error
+          timeout_minutes: 40
+          command: ./gradlew publishAllPublicationsToSonatypeRepository closeAndReleaseSonatypeStagingRepository --stacktrace

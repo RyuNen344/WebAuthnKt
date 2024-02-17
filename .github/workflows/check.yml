@@ -31,6 +31,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/gradle
       - name: check publish task
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          PGP_KEY_ID: ${{ secrets.PGP_KEY_ID }}
+          PGP_SIGNING_KEY: ${{ secrets.PGP_SIGNING_KEY }}
+          PGP_SIGNING_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
         shell: bash
         run: |
           ./gradlew publishReleasePublicationToLocalRepository --scan
