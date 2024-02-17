@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.0-alpha04](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha03...1.0.0-alpha04) (2024-02-17)
+
+
+### Features
+
+* toggle sign feature for jitpack ([#17](https://github.com/RyuNen344/WebAuthnKt/issues/17)) ([5d62954](https://github.com/RyuNen344/WebAuthnKt/commit/5d62954eb306b9e87f6c6b80f71e31d6d07adc81))
+
+
+### Bug Fixes
+
+* release flow condition ([d1dd5f0](https://github.com/RyuNen344/WebAuthnKt/commit/d1dd5f00bb9959124d61a3ff831c1b7d2916b7ea))
+
+
+### Miscellaneous Chores
+
+* release 1.0.0-alpha04 ([cd215c5](https://github.com/RyuNen344/WebAuthnKt/commit/cd215c5764c4ac529de1c37dc082ec26f50e9fc2))
+
 ## [1.0.0-alpha03](https://github.com/RyuNen344/WebAuthnKt/compare/v1.0.0-alpha03...1.0.0-alpha03) (2024-02-17)
 
 
