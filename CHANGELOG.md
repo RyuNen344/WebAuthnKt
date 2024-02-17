@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.0-alpha02](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha02...1.1.0-alpha02) (2024-02-17)
+## [1.0.0-alpha03](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha02...1.0.0-alpha03) (2024-02-17)
 
 
 ### Features
