@@ -52,6 +52,8 @@ jobs:
           cd serialization && zip -r serialization.zip ./io && cd ..;
       - name: uploads artifacts
         if: ${{ steps.release.outputs.release_created }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           gh release upload ${{ steps.release.outputs.tag_name }} releases/moshi/moshi.zip releases/serialization/serialization.zip --clobber
