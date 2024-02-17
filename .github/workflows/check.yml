@@ -43,15 +43,15 @@ jobs:
           rm -rf ./moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
           cp -r ./maven ./serialization;
           rm -rf ./serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
-          zip -r moshi.zip ./moshi/*;
-          zip -r serialization.zip ./serialization/*;
+          cd moshi && zip -r moshi.zip ./io && cd ..;
+          cd serialization && zip -r serialization.zip ./io && cd ..;
           ls -la;
       - uses: actions/upload-artifact@v4
         with:
           name: zip
           path: |
-            releases/moshi.zip
-            releases/serialization.zip
+            releases/moshi/moshi.zip
+            releases/serialization/serialization.zip
 
   test:
     runs-on: ubuntu-latest
