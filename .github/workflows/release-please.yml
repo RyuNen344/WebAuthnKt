@@ -34,6 +34,7 @@ jobs:
           PGP_KEY_ID: ${{ secrets.PGP_KEY_ID }}
           PGP_SIGNING_KEY: ${{ secrets.PGP_SIGNING_KEY }}
           PGP_SIGNING_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
+          SIGNING_ENABLED: ${{ secrets.SIGNING_ENABLED }}
         shell: bash
         run: |
           ./gradlew publishReleasePublicationToLocalRepository --scan

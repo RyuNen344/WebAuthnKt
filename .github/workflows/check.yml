@@ -31,12 +31,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/gradle
       - name: check publish task
-        env:
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          PGP_KEY_ID: ${{ secrets.PGP_KEY_ID }}
-          PGP_SIGNING_KEY: ${{ secrets.PGP_SIGNING_KEY }}
-          PGP_SIGNING_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
         shell: bash
         run: |
           ./gradlew publishReleasePublicationToLocalRepository --scan
@@ -44,19 +38,20 @@ jobs:
         shell: bash
         run: |
           find . -type f -name 'maven-metadata.xml*' -delete;
-          cp -r ./releases/maven ./releases/moshi;
-          rm -rf ./releases/moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
-          cp -r ./releases/maven ./releases/serialization;
-          rm -rf ./releases/serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
-          zip -r moshi.zip ./releases/moshi/*;
-          zip -r serialization.zip ./releases/serialization/*;
+          cd releases;
+          cp -r ./maven ./moshi;
+          rm -rf ./moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
+          cp -r ./maven ./serialization;
+          rm -rf ./serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
+          zip -r moshi.zip ./moshi/*;
+          zip -r serialization.zip ./serialization/*;
           ls -la;
       - uses: actions/upload-artifact@v4
         with:
           name: zip
           path: |
-            moshi.zip
-            serialization.zip
+            releases/moshi.zip
+            releases/serialization.zip
 
   test:
     runs-on: ubuntu-latest
