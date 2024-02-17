@@ -39,6 +39,7 @@ jobs:
         run: |
           ./gradlew publishReleasePublicationToLocalRepository --scan
       - name: zip artifacts
+        if: ${{ steps.release.outputs.release_created }}
         shell: bash
         run: |
           find . -type f -name 'maven-metadata.xml*' -delete;
@@ -50,6 +51,7 @@ jobs:
           cd moshi && zip -r moshi.zip ./io && cd ..;
           cd serialization && zip -r serialization.zip ./io && cd ..;
       - name: uploads artifacts
+        if: ${{ steps.release.outputs.release_created }}
         shell: bash
         run: |
           gh release upload ${{ steps.release.outputs.tag_name }} releases/moshi/moshi.zip releases/serialization/serialization.zip --clobber
