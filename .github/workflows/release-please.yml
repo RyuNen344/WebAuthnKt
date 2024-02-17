@@ -42,13 +42,14 @@ jobs:
         shell: bash
         run: |
           find . -type f -name 'maven-metadata.xml*' -delete;
-          cp -r ./releases/maven ./releases/moshi;
-          rm -rf ./releases/moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
-          cp -r ./releases/maven ./releases/serialization;
-          rm -rf ./releases/serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
-          zip -r moshi.zip ./releases/moshi -x "*.DS_Store" "*__MACOSX*";
-          zip -r serialization.zip ./releases/serialization -x "*.DS_Store" "*__MACOSX*";
+          cd releases;
+          cp -r ./maven ./moshi;
+          rm -rf ./moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
+          cp -r ./maven ./serialization;
+          rm -rf ./serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
+          cd moshi && zip -r moshi.zip ./io && cd ..;
+          cd serialization && zip -r serialization.zip ./io && cd ..;
       - name: uploads artifacts
         shell: bash
         run: |
-          gh release upload ${{ steps.release.outputs.tag_name }} moshi.zip serialization.zip --clobber
+          gh release upload ${{ steps.release.outputs.tag_name }} releases/moshi/moshi.zip releases/serialization/serialization.zip --clobber
