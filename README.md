@@ -25,11 +25,33 @@ Inspired by [webauthn-json](https://github.com/github/webauthn-json)</br>
 
 ### MavenCentral
 
-🚧
+Set your `settings.gradle` like below
+
+```groovy:settings.gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+```
+
+Set your `build.gradle` like below
+
+```groovy:settings.gradle
+dependencies {
+    // moshi
+    implementation 'io.github.ryunen344.webauthn:webauthn2-json-moshi:${version}'
+    
+    // kotlinx.serialization
+    implementation 'io.github.ryunen344.webauthn:webauthn2-json-serialization:${version}'
+}
+```
 
 ### JitPack
 
-set your `settings.gradle` like below
+Set your `settings.gradle` like below
 
 ```groovy:settings.gradle
 dependencyResolutionManagement {
@@ -42,7 +64,7 @@ dependencyResolutionManagement {
 }
 ```
 
-set your `build.gradle` like below
+Set your `build.gradle` like below
 
 ```groovy:settings.gradle
 dependencies {
