@@ -1,5 +1,6 @@
 # WebAuthnKt
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.ryunen344.webauthn/webauthn2-json-moshi/badge.svg?style=plastic&gav=true)](https://maven-badges.herokuapp.com/maven-central/io.github.ryunen344.webauthn/webauthn2-json-moshi)
 [![jitpack](https://jitpack.io/v/RyuNen344/WebAuthnKt.svg)](https://jitpack.io/#RyuNen344/WebAuthnKt)
 
 Pure pre-implementation
