@@ -1,5 +1,8 @@
 # WebAuthnKt
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.ryunen344.webauthn/webauthn2-json-moshi/badge.svg?style=plastic&gav=true)](https://maven-badges.herokuapp.com/maven-central/io.github.ryunen344.webauthn/webauthn2-json-moshi)
+[![jitpack](https://jitpack.io/v/RyuNen344/WebAuthnKt.svg)](https://jitpack.io/#RyuNen344/WebAuthnKt)
+
 Pure pre-implementation
 of [Web Authentication: An API for accessing Public Key Credentials Level 2](https://www.w3.org/TR/webauthn-2/)</br>
 This library allows you to use WebAuthn JSON without self-implementation.</br>
@@ -23,23 +26,19 @@ Inspired by [webauthn-json](https://github.com/github/webauthn-json)</br>
 
 ### MavenCentral
 
-🚧
-
-### JitPack
-
-set your `settings.gradle` like below
+Set your `settings.gradle` like below
 
 ```groovy:settings.gradle
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
     }
 }
 ```
 
-set your `build.gradle` like below
+Set your `build.gradle` like below
 
 ```groovy:settings.gradle
 dependencies {
@@ -48,6 +47,33 @@ dependencies {
     
     // kotlinx.serialization
     implementation 'io.github.ryunen344.webauthn:webauthn2-json-serialization:${version}'
+}
+```
+
+### JitPack
+
+Set your `settings.gradle` like below
+
+```groovy:settings.gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Set your `build.gradle` like below
+
+```groovy:settings.gradle
+dependencies {
+    // moshi
+    implementation 'com.github.RyuNen344.WebAuthnKt:webauthn2-json-moshi:${version}'
+    
+    // kotlinx.serialization
+    implementation 'com.github.RyuNen344.WebAuthnKt:webauthn2-json-serialization:${version}'
 }
 ```
 
@@ -60,7 +86,7 @@ you need to use WebAuthnAdapterHelper to setup moshi
 ```kotlin 
 val moshi = Moshi.Builder().apply(WebAuthnAdapterHelper()::setup).build()
 val adapter = moshi.adapter(PublicKeyCredentialCreationOptions::class.java)
-val json = adapter.fromJson(CredentialCreationOptionsJSON)
+val json = adapter.fromJson(PublicKeyCredentialCreationOptionsJSON)
 ```
 
 ### kotlinx.serialization

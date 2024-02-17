@@ -1,0 +1,59 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          default-branch: main
+          release-type: simple
+          package-name: release-please-action
+          include-v-in-tag: false
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: ./.github/actions/gradle
+        if: ${{ steps.release.outputs.release_created }}
+      - name: generate artifacts
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          PGP_KEY_ID: ${{ secrets.PGP_KEY_ID }}
+          PGP_SIGNING_KEY: ${{ secrets.PGP_SIGNING_KEY }}
+          PGP_SIGNING_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
+          SIGNING_ENABLED: ${{ secrets.SIGNING_ENABLED }}
+        shell: bash
+        run: |
+          ./gradlew publishReleasePublicationToLocalRepository --scan
+      - name: zip artifacts
+        if: ${{ steps.release.outputs.release_created }}
+        shell: bash
+        run: |
+          find . -type f -name 'maven-metadata.xml*' -delete;
+          cd releases;
+          cp -r ./maven ./moshi;
+          rm -rf ./moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
+          cp -r ./maven ./serialization;
+          rm -rf ./serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
+          cd moshi && zip -r moshi.zip ./io && cd ..;
+          cd serialization && zip -r serialization.zip ./io && cd ..;
+      - name: uploads artifacts
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} releases/moshi/moshi.zip releases/serialization/serialization.zip --clobber
