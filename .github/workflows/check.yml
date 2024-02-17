@@ -50,11 +50,13 @@ jobs:
           rm -rf ./releases/serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
           zip -r moshi.zip ./releases/moshi -x "*.DS_Store" "*__MACOSX*";
           zip -r serialization.zip ./releases/serialization -x "*.DS_Store" "*__MACOSX*";
-          ls -la ./releases;
+          ls -la;
       - uses: actions/upload-artifact@v4
         with:
           name: zip
-          path: releases
+          path: |
+            moshi.zip
+            serialization.zip
 
   test:
     runs-on: ubuntu-latest
