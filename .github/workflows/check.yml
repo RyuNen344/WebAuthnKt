@@ -40,6 +40,21 @@ jobs:
         shell: bash
         run: |
           ./gradlew publishReleasePublicationToLocalRepository --scan
+      - name: zip artifacts
+        shell: bash
+        run: |
+          find . -type f -name 'maven-metadata.xml*' -delete;
+          cp -r ./releases/maven ./releases/moshi;
+          rm -rf ./releases/moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
+          cp -r ./releases/maven ./releases/serialization;
+          rm -rf ./releases/serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
+          zip -r moshi.zip ./releases/moshi -x "*.DS_Store" "*__MACOSX*";
+          zip -r serialization.zip ./releases/serialization -x "*.DS_Store" "*__MACOSX*";
+          ls -la ./releases;
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zip
+          path: releases
 
   test:
     runs-on: ubuntu-latest

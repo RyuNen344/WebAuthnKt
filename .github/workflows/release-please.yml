@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: ./.github/actions/gradle
         if: ${{ steps.release.outputs.release_created }}
-      - uses: nick-fields/retry@v3
+      - name: generate artifacts
         if: ${{ steps.release.outputs.release_created }}
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
@@ -34,8 +34,20 @@ jobs:
           PGP_KEY_ID: ${{ secrets.PGP_KEY_ID }}
           PGP_SIGNING_KEY: ${{ secrets.PGP_SIGNING_KEY }}
           PGP_SIGNING_PASSWORD: ${{ secrets.PGP_SIGNING_PASSWORD }}
-        with:
-          max_attempts: 3
-          retry_on: error
-          timeout_minutes: 40
-          command: ./gradlew publishReleasePublicationToSonatypeRepository closeAndReleaseSonatypeStagingRepository --no-configuration-cache --stacktrace
+        shell: bash
+        run: |
+          ./gradlew publishReleasePublicationToLocalRepository --scan
+      - name: zip artifacts
+        shell: bash
+        run: |
+          find . -type f -name 'maven-metadata.xml*' -delete;
+          cp -r ./releases/maven ./releases/moshi;
+          rm -rf ./releases/moshi/io/github/ryunen344/webauthn/webauthn2-json-serialization;
+          cp -r ./releases/maven ./releases/serialization;
+          rm -rf ./releases/serialization/io/github/ryunen344/webauthn/webauthn2-json-moshi;
+          zip -r moshi.zip ./releases/moshi -x "*.DS_Store" "*__MACOSX*";
+          zip -r serialization.zip ./releases/serialization -x "*.DS_Store" "*__MACOSX*";
+      - name: uploads artifacts
+        shell: bash
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} moshi.zip serialization.zip --clobber
