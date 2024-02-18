@@ -7,6 +7,8 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "deps(gradle)"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -14,6 +16,8 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "deps(npm)"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -21,6 +25,8 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "deps(github-actions)"
 
   # https://github.com/dependabot/dependabot-core/issues/5137
   - package-ecosystem: "github-actions"
@@ -29,6 +35,8 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "deps(github-actions)"
 
   - package-ecosystem: "github-actions"
     directory: ".github/actions/npm"
@@ -36,3 +44,5 @@ updates:
       interval: "daily"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "deps(github-actions)"

@@ -37,6 +37,11 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: read
+      checks: write
+      pull-requests: write
     strategy:
       fail-fast: false
       matrix:
