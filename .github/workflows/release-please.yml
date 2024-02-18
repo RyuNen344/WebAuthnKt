@@ -13,12 +13,10 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: google-github-actions/release-please-action@v4
         id: release
         with:
-          default-branch: main
           release-type: simple
-          package-name: release-please-action
           include-v-in-tag: false
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
