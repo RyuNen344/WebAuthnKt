@@ -10,5 +10,6 @@
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
   "pull-request-title-pattern": "release: ${version}",
-  "version-file": "version.txt"
+  "version-file": "version.txt",
+  ".": "1.0.0-alpha05"
 }
