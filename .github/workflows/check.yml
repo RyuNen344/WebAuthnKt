@@ -38,7 +38,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       issues: read
       checks: write
       pull-requests: write
