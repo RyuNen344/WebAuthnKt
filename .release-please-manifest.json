@@ -8,5 +8,6 @@
   "prerelease": true,
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
-  "pull-request-title-pattern": "release: ${version}"
+  "pull-request-title-pattern": "release: ${version}",
+  ".": "1.0.0-alpha05"
 }
