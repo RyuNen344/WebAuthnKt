@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0-alpha05](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha04...1.0.0-alpha05) (2024-02-18)
+
+
+### Miscellaneous Chores
+
+* release 1.0.0-alpha05 ([a014996](https://github.com/RyuNen344/WebAuthnKt/commit/a0149964950c390a4cd09fcfd2a1c1fae8589fa4))
+
 ## [1.0.0-alpha04](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha03...1.0.0-alpha04) (2024-02-17)
 
 
