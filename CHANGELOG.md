@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.0-alpha05](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha04...1.0.0-alpha05) (2024-02-18)
+
+
+### Dependency Updates
+
+* **gradle:** bump com-google-truth from 1.4.0 to 1.4.1 ([#33](https://github.com/RyuNen344/WebAuthnKt/issues/33)) ([6470ae9](https://github.com/RyuNen344/WebAuthnKt/commit/6470ae992fbf9f1aa27216289db258407c8d1700))
+* **gradle:** bump org.jetbrains.kotlinx:kotlinx-serialization-json ([#34](https://github.com/RyuNen344/WebAuthnKt/issues/34)) ([04c6b83](https://github.com/RyuNen344/WebAuthnKt/commit/04c6b834b2d1edecabf6776a43081a5989026b73))
+* **npm:** bump @simplewebauthn/server from 9.0.2 to 9.0.3 ([#35](https://github.com/RyuNen344/WebAuthnKt/issues/35)) ([a86a6e9](https://github.com/RyuNen344/WebAuthnKt/commit/a86a6e958dd9853a5d281e107556979c77f43bfc))
+* **npm:** bump @types/node from 20.11.17 to 20.11.19 ([#36](https://github.com/RyuNen344/WebAuthnKt/issues/36)) ([f8b4b9a](https://github.com/RyuNen344/WebAuthnKt/commit/f8b4b9a23b35637b06b95d03628f14358590e9ff))
+
+
+### Chores
+
+* setup release-please ([0b76630](https://github.com/RyuNen344/WebAuthnKt/commit/0b76630948a6b0350a2b449c2edb9c82bc24059f))
+
 ## [1.0.0-alpha04](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha03...1.0.0-alpha04) (2024-02-17)
 
 
