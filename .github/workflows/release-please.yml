@@ -17,6 +17,7 @@ jobs:
         id: release
         with:
           release-type: simple
+          config-file: release-please-config.json
       - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
       - uses: ./.github/actions/gradle
