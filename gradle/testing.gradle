@@ -22,7 +22,7 @@ androidComponents {
     }
 }
 
-jacoco.toolVersion = "0.8.11"
+jacoco.toolVersion = libs.versions.jacoco.get()
 
 tasks.register("jacoco", JacocoReport) {
     group = "verification"
@@ -44,6 +44,14 @@ tasks.register("jacoco", JacocoReport) {
             include("**/*.ec", "**/*.exec")
         }
     )
+}
+
+configurations.configureEach {
+    it.resolutionStrategy.eachDependency {
+        if (requested.group == "org.jacoco") {
+            useVersion libs.versions.jacoco.get()
+        }
+    }
 }
 
 dependencies {
