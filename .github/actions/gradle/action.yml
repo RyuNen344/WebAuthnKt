@@ -16,7 +16,7 @@ runs:
         \cp -rf ./gradle/cache-settings.gradle ~/.gradle/init.d \;
 
     - name: validate wrapper
-      uses: gradle/wrapper-validation-action@v2
+      uses: gradle/wrapper-validation-action@v3
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
