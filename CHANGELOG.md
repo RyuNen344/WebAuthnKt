@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha08...1.0.0) (2024-05-31)
+
+
+### Chores
+
+* **doc:** update README maven central badge ([d149495](https://github.com/RyuNen344/WebAuthnKt/commit/d1494951ff0767bea6dc04f3391e34413ffa657a))
+* release 1.0.0 ([#111](https://github.com/RyuNen344/WebAuthnKt/issues/111)) ([1226d72](https://github.com/RyuNen344/WebAuthnKt/commit/1226d723d6851e6d8261344eb867baf01989da66))
+
 ## [1.0.0-alpha08](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha07...1.0.0-alpha08) (2024-05-31)
 
 
