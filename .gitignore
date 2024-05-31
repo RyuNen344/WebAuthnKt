@@ -34,6 +34,7 @@ bin/
 gen/
 out/
 .gradle/
+.kotlin/
 build/
 releases/
 local.properties

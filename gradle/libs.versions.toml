@@ -8,7 +8,7 @@ jackson-databind = "2.17.1"
 jacoco = "0.8.11"
 jsonassert = "1.5.1"
 junit = "4.13.2"
-kotlin = "1.9.24"
+kotlin = "2.0.0"
 kotlinx-serialization-json = "1.6.3"
 moshi = "1.15.1"
 equalsverifier = "3.16.1"
@@ -33,7 +33,7 @@ org-robolectric-robolectric = { group = "org.robolectric", name = "robolectric",
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
-com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.24-1.0.20" }
+com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.0.0-1.0.21" }
 nexus-publish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
