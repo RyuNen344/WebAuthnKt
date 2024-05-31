@@ -31,7 +31,4 @@ dependencies {
     compileOnly projects.webauthn2JsonMoshiAnnotation
     implementation libs.moshi
     ksp libs.moshi.codegen
-
-    // workaround for IDE index
-    compileOnly libs.kotlinx.serialization.json
 }
