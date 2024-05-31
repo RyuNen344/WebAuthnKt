@@ -9,6 +9,11 @@ updates:
       timezone: "Asia/Tokyo"
     commit-message:
       prefix: "deps(gradle)"
+    groups:
+      kotlin:
+        patterns:
+          - "kotlin"
+          - "com.google.devtools.ksp"
 
   - package-ecosystem: "npm"
     directory: "/"
