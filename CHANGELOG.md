@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.0-alpha08](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha07...1.0.0-alpha08) (2024-05-31)
+
+
+### Dependency Updates
+
+* **gradle:** bump com.gradle.develocity from 3.17.3 to 3.17.4 ([#101](https://github.com/RyuNen344/WebAuthnKt/issues/101)) ([620c52b](https://github.com/RyuNen344/WebAuthnKt/commit/620c52bb5263996c0792bba77435353dfad0bb20))
+* **gradle:** bump kotlin from 1.9.24 to 2.0.0 ([#104](https://github.com/RyuNen344/WebAuthnKt/issues/104)) ([ed91ca3](https://github.com/RyuNen344/WebAuthnKt/commit/ed91ca3484f9e78a198cc154157ce9b1309d0118))
+* **gradle:** bump org.robolectric:robolectric from 4.12.1 to 4.12.2 ([#102](https://github.com/RyuNen344/WebAuthnKt/issues/102)) ([90032a2](https://github.com/RyuNen344/WebAuthnKt/commit/90032a23d9e95703c1f58491a74f6b2d1b8c4ce6))
+* **npm:** bump @types/node from 20.12.11 to 20.12.12 ([#100](https://github.com/RyuNen344/WebAuthnKt/issues/100)) ([db74aab](https://github.com/RyuNen344/WebAuthnKt/commit/db74aab9b024f95903ef8fe11bf256ac160e9843))
+
+
+### Chores
+
+* update ([#108](https://github.com/RyuNen344/WebAuthnKt/issues/108)) ([2f63ea6](https://github.com/RyuNen344/WebAuthnKt/commit/2f63ea6de6ac2a0f3e76f01b49dba8ccc42d337f))
+
 ## [1.0.0-alpha07](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.0-alpha06...1.0.0-alpha07) (2024-05-13)
 
 
