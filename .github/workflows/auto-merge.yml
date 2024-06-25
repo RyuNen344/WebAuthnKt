@@ -19,7 +19,7 @@ jobs:
       checks: write
       pull-requests: write
       repository-projects: write
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.actor_id == '49699333' }} # "dependabot[bot]"
     steps:
       - name: enable auto-merge
         shell: bash
