@@ -24,6 +24,7 @@ jobs:
       - uses: JetBrains/qodana-action@v2024.1
         with:
           cache-default-branch-only: true
+          args: -l,jetbrains/qodana-jvm-android
 
   publish:
     runs-on: ubuntu-latest
