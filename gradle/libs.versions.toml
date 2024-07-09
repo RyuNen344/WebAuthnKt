@@ -12,7 +12,7 @@ kotlin = "2.0.0"
 kotlinx-serialization-json = "1.7.1"
 moshi = "1.15.1"
 equalsverifier = "3.16.1"
-org-robolectric = "4.12.2"
+org-robolectric = "4.13"
 
 [libraries]
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
