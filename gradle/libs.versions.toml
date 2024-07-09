@@ -37,4 +37,4 @@ com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.0.0-1.0
 nexus-publish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-org-jetbrains-kotlinx-compatibility = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.14.0" }
+org-jetbrains-kotlinx-compatibility = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.15.0" }
