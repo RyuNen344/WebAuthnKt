@@ -2,7 +2,7 @@
 agp = "8.5.1"
 androidx-test-ext-junit = "1.2.1"
 androidx-test-ext-truth = "1.6.0"
-com-google-truth = "1.4.3"
+com-google-truth = "1.4.4"
 desugar_jdk_libs = "2.0.4"
 jackson-databind = "2.17.2"
 jacoco = "0.8.11"
