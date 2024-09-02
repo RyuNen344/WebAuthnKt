@@ -75,7 +75,7 @@ jobs:
         shell: bash
         run: |
           ./gradlew :${{ matrix.module }}:jacoco --scan
-      - uses: madrapps/jacoco-report@v1.6.1
+      - uses: madrapps/jacoco-report@v1.7.0
         if: ${{ !cancelled() }}
         with:
           paths: |
