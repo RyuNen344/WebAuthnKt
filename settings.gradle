@@ -20,6 +20,11 @@ pluginManagement {
                     "io.github.gradle-nexus.publish-plugin",
                     "io.github.gradle-nexus.publish-plugin.gradle.plugin"
                 )
+                includeModule("org.gradle", "github-dependency-graph-gradle-plugin")
+                includeModule(
+                    "org.gradle.github-dependency-graph-gradle-plugin",
+                    "org.gradle.github-dependency-graph-gradle-plugin.gradle.plugin"
+                )
             }
         }
     }
