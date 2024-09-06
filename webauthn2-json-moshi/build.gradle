@@ -1,8 +1,8 @@
 plugins {
-    alias libs.plugins.com.android.library
-    alias libs.plugins.org.jetbrains.kotlin.android
+    id "com.android.library" version "8.5.2"
+    id "org.jetbrains.kotlin.android" version "2.0.20"
     alias libs.plugins.org.jetbrains.kotlinx.compatibility
-    alias libs.plugins.com.google.devtools.ksp
+    id "com.google.devtools.ksp" version "2.0.20-1.0.24"
 }
 
 apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
