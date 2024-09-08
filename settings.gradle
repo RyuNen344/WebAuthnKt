@@ -25,6 +25,8 @@ pluginManagement {
                     "org.gradle.github-dependency-graph-gradle-plugin",
                     "org.gradle.github-dependency-graph-gradle-plugin.gradle.plugin"
                 )
+                includeModule("org.spdx", "spdx-gradle-plugin")
+                includeModule("org.spdx.sbom", "org.spdx.sbom.gradle.plugin")
             }
         }
     }

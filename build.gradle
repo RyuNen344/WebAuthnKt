@@ -2,6 +2,7 @@ plugins {
     alias libs.plugins.com.android.library apply false
     alias libs.plugins.org.jetbrains.kotlin.android apply false
     alias libs.plugins.nexus.publish
+    alias libs.plugins.org.spdx.sbom apply false
 }
 
 tasks.register('clean', Delete) {
