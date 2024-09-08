@@ -66,11 +66,13 @@
          <trusted-key id="5767F9CDE920750621875079A40E24B5B408DBD5" group="org.robolectric"/>
          <trusted-key id="5897253BEA3046AEEA95A067E93671C7272B7B3F" group="org.jdom"/>
          <trusted-key id="6214760097DC5CFAD0175AC2C9FBAA83A8753994">
-            <trusting group="org.codehaus.woodstox"/>
             <trusting group="com.fasterxml"/>
             <trusting group="com.fasterxml.jackson"/>
             <trusting group="com.fasterxml.jackson.core"/>
+            <trusting group="com.fasterxml.jackson.dataformat"/>
             <trusting group="com.fasterxml.jackson.module"/>
+            <trusting group="com.fasterxml.jackson.woodstox"/>
+            <trusting group="org.codehaus.woodstox"/>
          </trusted-key>
          <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1">
             <trusting group="com.google.guava" name="failureaccess"/>
