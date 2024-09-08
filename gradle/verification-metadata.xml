@@ -10,8 +10,9 @@
         </trusted-artifacts>
         <trusted-keys>
             <trusted-key id="7B79ADD11F8A779FE90FD3D0893A028475557671">
+                <trusting group="com.gradle.develocity" name="com.gradle.develocity.gradle.plugin"/>
                 <trusting group="com.gradle" name="develocity-gradle-plugin"/>
-                <trusting group="com.gradle.develocity"/>
+                <trusting group="org.gradle" name="github-dependency-graph-gradle-plugin"/>
             </trusted-key>
             <trusted-key id="A5F483CD733A4EBAEA378B2AE88979FB9B30ACF2">
                 <trusting group="com.android" name="signflinger"/>
