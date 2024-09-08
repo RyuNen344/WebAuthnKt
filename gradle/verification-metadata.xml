@@ -4,8 +4,10 @@
         <verify-metadata>true</verify-metadata>
         <verify-signatures>true</verify-signatures>
         <trusted-artifacts>
+            <trust group="com.android.library" name="com.android.library.gradle.plugin"/>
             <trust group="com.gradle" name="develocity-gradle-plugin"/>
             <trust group="org.gradle" name="github-dependency-graph-gradle-plugin"/>
+            <trust group="org.jetbrains.kotlin.android" name="org.jetbrains.kotlin.android.gradle.plugin"/>
             <trust file=".*-javadoc[.]jar" regex="true"/>
             <trust file=".*-sources[.]jar" regex="true"/>
         </trusted-artifacts>
