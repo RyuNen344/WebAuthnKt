@@ -21,6 +21,27 @@ jobs:
       repository-projects: write
     if: ${{ github.actor_id == '49699333' }} # "dependabot[bot]"
     steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+      - name: config git
+        shell: bash
+        run: |
+          git config --global user.name "github-actions[bot]" && git config --global user.email github-actions-bot@users.noreply.github.com
+      - name: update verification-metadata
+        shell: bash
+        run: |
+          ./gradlew --write-verification-metadata sha256 androidDependencies --scan
+      - name: check verification-metadata diff
+        id: diff
+        shell: bash
+        run: |
+          if [ "$(git status --porcelain | wc -l)" -gt 0 ]; then
+            echo "::error::verification-metadata.xml is not up-to-date. Please run check and commit the changes";
+            echo "$(git status --porcelain)" | while read -r l; do echo "::error::$l"; done;
+            exit 1
+          else
+            echo "::notice::verification-metadata.xml is up-to-date";
+          fi
       - name: enable auto-merge
         shell: bash
         run:
