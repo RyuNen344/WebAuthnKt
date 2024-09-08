@@ -71,7 +71,7 @@
             <trusting group="com.fasterxml.jackson.core"/>
             <trusting group="com.fasterxml.jackson.dataformat"/>
             <trusting group="com.fasterxml.jackson.module"/>
-            <trusting group="com.fasterxml.jackson.woodstox"/>
+            <trusting group="com.fasterxml.woodstox"/>
             <trusting group="org.codehaus.woodstox"/>
          </trusted-key>
          <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1">
