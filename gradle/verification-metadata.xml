@@ -68,6 +68,7 @@
             <trusted-key id="6F538074CCEBF35F28AF9B066A0975F8B1127B83">
                 <trusting group="org.jetbrains.kotlin"/>
                 <trusting group="org.jetbrains.kotlin.android"/>
+                <trusting group="org.jetbrains.kotlin.plugin.serialization"/>
             </trusted-key>
             <trusted-key id="6F7E5ACBCD02DB60DFD232E45E1F79A7C298661E" group="com.google.auto"/>
             <trusted-key id="7616EB882DAF57A11477AAF559A252FB1199D873" group="com.google.code.findbugs"/>
@@ -132,6 +133,7 @@
             <trusted-key id="D6F1BC78607808EC8E9F69437A8860944FAD5F62" group="org.apache.commons" name="commons-parent" version="34"/>
             <trusted-key id="DB0597E3144342256BC81E3EC727D053C4481CF5" group="org.tensorflow"/>
             <trusted-key id="DBD744ACE7ADE6AA50DD591F66B50994442D2D40" group="com.squareup">
+                <trusting group="com.squareup"/>
                 <trusting group="com.squareup.moshi"/>
                 <trusting group="com.squareup.okio"/>
             </trusted-key>
