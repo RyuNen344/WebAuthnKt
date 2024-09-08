@@ -19,6 +19,7 @@ runs:
       uses: gradle/actions/setup-gradle@v4
       with:
         gradle-version: wrapper
+        cache-disabled: true
         gradle-home-cache-cleanup: true
         dependency-graph: generate-and-submit
 

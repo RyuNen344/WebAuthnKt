@@ -10,6 +10,7 @@
             <trust group="org.jetbrains.kotlin.android" name="org.jetbrains.kotlin.android.gradle.plugin"/>
             <trust file=".*-javadoc[.]jar" regex="true"/>
             <trust file=".*-sources[.]jar" regex="true"/>
+            <trust file=".*[.]asc" regex="true"/>
         </trusted-artifacts>
         <trusted-keys>
             <trusted-key id="04543577D6A9CC626239C50C7ECBD740FF06AEB5">
