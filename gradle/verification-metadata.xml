@@ -49,11 +49,13 @@
          <trusted-key id="3051D45031E13516A6E8FAFF280D66A55F5316C5" group="org.bitbucket.b_c" name="jose4j"/>
          <trusted-key id="31BAE2E51D95E0F8AD9B7BCC40A3C4432BD7308C" group="com.googlecode.juniversalchardet"/>
          <trusted-key id="33FD4BFD33554634053D73C0C2148900BCD3C2AF" group="org.jetbrains" name="annotations"/>
+         <trusted-key id="34441E504A937F43EB0DAEF96A65176A0FB1CD0B" group="org.codehaus.groovy"/>
          <trusted-key id="41CD49B4EF5876F9E9F691DABAC30622339994C4" group="org.jspecify" name="jspecify" version="0.3.0"/>
          <trusted-key id="44FBDBBC1A00FE414F1C1873586654072EAD6677" group="org.sonatype.oss"/>
          <trusted-key id="47504B76CF89C15C0512D9AFE16AB52D79FD224F" group="com.google.api.grpc"/>
          <trusted-key id="475F3B8E59E6E63AA78067482C7B12F2A511E325" group="org.slf4j"/>
          <trusted-key id="4BF79B8259007B566D2FCE82296CD27F60EED12C" group="com.google.crypto.tink"/>
+         <trusted-key id="4DB1A49729B053CAF015CEE9A6ADFC93EF34893E" group="org.hamcrest"/>
          <trusted-key id="4F7E32D440EF90A83011A8FC6425559C47CC79C4">
             <trusting group="com.sun.activation"/>
             <trusting group="javax.annotation"/>
@@ -116,6 +118,8 @@
             <trusting group="com.android.tools.build"/>
             <trusting group="com.android.tools.ddms"/>
             <trusting group="com.android.tools.emulator"/>
+            <trusting group="com.android.tools.external.com-intellij"/>
+            <trusting group="com.android.tools.external.org-jetbrains"/>
             <trusting group="com.android.tools.layoutlib"/>
             <trusting group="com.android.tools.lint"/>
             <trusting group="com.android.tools.utp"/>
