@@ -1,9 +1,9 @@
 [versions]
-agp = "8.6.0"
+agp = "8.5.2"
 androidx-test-ext-junit = "1.2.1"
 androidx-test-ext-truth = "1.6.0"
 com-google-truth = "1.4.4"
-desugar_jdk_libs = "2.1.2"
+desugar_jdk_libs = "2.1.1"
 jackson-databind = "2.17.2"
 jacoco = "0.8.11"
 jsonassert = "1.5.3"
@@ -33,8 +33,9 @@ org-robolectric-robolectric = { group = "org.robolectric", name = "robolectric",
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
-com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.0.20-1.0.25" }
+com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.0.20-1.0.24" }
 nexus-publish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 org-jetbrains-kotlinx-compatibility = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.16.3" }
+org-spdx-sbom = { id = "org.spdx.sbom", version = "0.8.0" }

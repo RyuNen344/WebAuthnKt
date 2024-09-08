@@ -15,9 +15,6 @@ runs:
         mkdir -p ~/.gradle/init.d \;
         \cp -rf ./gradle/cache-settings.gradle ~/.gradle/init.d \;
 
-    - name: validate wrapper
-      uses: gradle/actions/wrapper-validation@v4
-
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
       with:
