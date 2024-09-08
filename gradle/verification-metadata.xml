@@ -27,6 +27,7 @@
          <trusted-key id="1597AB231B7ADD7E14B1D9C43F00DB67AE236E2E" group="org.conscrypt" name="conscrypt-openjdk-uber"/>
          <trusted-key id="190D5A957FF22273E601F7A7C92C5FEC70161C62" group="org.apache" name="apache" version="18"/>
          <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework"/>
+         <trusted-key id="1BE2DD4B1FCF252FE4F0A1D103281AA0289FF53A" group="com.soywiz.korlibs.korte" name="korte-jvm"/>
          <trusted-key id="24D04176586361FDA94EE0315F7786DF73E61F56" group="com.google.devtools.ksp"/>
          <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181">
             <trusting group="com.fasterxml"/>
@@ -64,6 +65,13 @@
          <trusted-key id="517B94F8D0A46317A28D8AB30DA8A5EC02D11EAD" group="net.sf.jopt-simple"/>
          <trusted-key id="5767F9CDE920750621875079A40E24B5B408DBD5" group="org.robolectric"/>
          <trusted-key id="5897253BEA3046AEEA95A067E93671C7272B7B3F" group="org.jdom"/>
+         <trusted-key id="6214760097DC5CFAD0175AC2C9FBAA83A8753994">
+            <trusting group="org.codehaus.woodstox"/>
+            <trusting group="com.fasterxml"/>
+            <trusting group="com.fasterxml.jackson"/>
+            <trusting group="com.fasterxml.jackson.core"/>
+            <trusting group="com.fasterxml.jackson.module"/>
+         </trusted-key>
          <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1">
             <trusting group="com.google.guava" name="failureaccess"/>
             <trusting group="com.google.guava" name="guava-parent"/>
@@ -100,7 +108,9 @@
             <trusting group="org.jetbrains.intellij.deps" name="trove4j"/>
             <trusting group="org.jetbrains.kotlinx"/>
          </trusted-key>
+         <trusted-key id="8E3A02905A1AE67E7B0F9ACD3967D4EDA591B991" group="org.jetbrains.kotlinx" name="kotlinx-html-jvm"/>
          <trusted-key id="90EE19787A7BCF6FD37A1E9180C08B1C29100955" group="com.squareup" name="javawriter"/>
+         <trusted-key id="98465301A4939C0279F2E847D89D05374952262B" group="org.jetbrains.dokka"/>
          <trusted-key id="A413F67D71BEEC23ADD0CE0ACB43338E060CF9FA" group="org.jacoco"/>
          <trusted-key id="A5BD02B93E7A40482EB1D66A5F69AD087600B22C" group="org.ow2.asm"/>
          <trusted-key id="A5F483CD733A4EBAEA378B2AE88979FB9B30ACF2">
@@ -155,6 +165,7 @@
             <trusting group="com.squareup.moshi"/>
             <trusting group="com.squareup.okio"/>
          </trusted-key>
+         <trusted-key id="E62231331BCA7E1F292C9B88C1B12A5D99C0729D" group="org.jetbrains"/>
          <trusted-key id="E77417AC194160A3FABD04969A259C7EE636C5ED">
             <trusting group="com.google.errorprone"/>
             <trusting group="com.google.errorprone" version="2.11.0"/>
