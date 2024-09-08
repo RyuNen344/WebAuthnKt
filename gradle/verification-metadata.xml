@@ -20,11 +20,11 @@
             <trusted-key id="0CC641C3A62453AB390066C4A41F13C999945293" group="commons-logging"/>
             <trusted-key id="0D35D3F60078655126908E8AF3D1600878E85A3D" group="io.netty"/>
             <trusted-key id="0F07D1201BDDAB67CFB84EB479752DB6C966F0B8" group="com.google.android" name="annotations"/>
-            <trusted-key id="10F3C7A02ECA55E502BADCF3991EFB94DB91127D" group="org.ow2" />
+            <trusted-key id="10F3C7A02ECA55E502BADCF3991EFB94DB91127D" group="org.ow2"/>
             <trusted-key id="1597AB231B7ADD7E14B1D9C43F00DB67AE236E2E" group="org.conscrypt" name="conscrypt-openjdk-uber"/>
             <trusted-key id="190D5A957FF22273E601F7A7C92C5FEC70161C62" group="org.apache" name="apache" version="18"/>
             <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework"/>
-            <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" >
+            <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181">
                 <trusting group="com.fasterxml.jackson"/>
                 <trusting group="com.fasterxml.jackson.core"/>
                 <trusting group="com.fasterxml.jackson.module"/>
@@ -42,7 +42,7 @@
             <trusted-key id="31BAE2E51D95E0F8AD9B7BCC40A3C4432BD7308C" group="com.googlecode.juniversalchardet"/>
             <trusted-key id="33FD4BFD33554634053D73C0C2148900BCD3C2AF" group="org.jetbrains" name="annotations"/>
             <trusted-key id="41CD49B4EF5876F9E9F691DABAC30622339994C4" group="org.jspecify" name="jspecify" version="0.3.0"/>
-            <trusted-key id="44FBDBBC1A00FE414F1C1873586654072EAD6677" group="org.sonatype.oss" />
+            <trusted-key id="44FBDBBC1A00FE414F1C1873586654072EAD6677" group="org.sonatype.oss"/>
             <trusted-key id="47504B76CF89C15C0512D9AFE16AB52D79FD224F" group="com.google.api.grpc"/>
             <trusted-key id="475F3B8E59E6E63AA78067482C7B12F2A511E325" group="org.slf4j"/>
             <trusted-key id="4BF79B8259007B566D2FCE82296CD27F60EED12C" group="com.google.crypto.tink"/>
@@ -51,13 +51,13 @@
                 <trusting group="javax.annotation"/>
             </trusted-key>
             <trusted-key id="4F8FEC6785F611D9A712EA2734918B7D3969D2F5" group="com.google.dagger"/>
-            <trusted-key id="517B94F8D0A46317A28D8AB30DA8A5EC02D11EAD" group="net.sf.jopt-simple" />
+            <trusted-key id="517B94F8D0A46317A28D8AB30DA8A5EC02D11EAD" group="net.sf.jopt-simple"/>
             <trusted-key id="5767F9CDE920750621875079A40E24B5B408DBD5" group="org.robolectric"/>
             <trusted-key id="5897253BEA3046AEEA95A067E93671C7272B7B3F" group="org.jdom"/>
             <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1">
                 <trusting group="com.google.guava" name="failureaccess"/>
                 <trusting group="com.google.guava" name="guava-parent"/>
-                <trusting group="com.google.jimfs" />
+                <trusting group="com.google.jimfs"/>
             </trusted-key>
             <trusted-key id="696B6199A2A9D8C29CE78CC0D041CAD2E452550F" group="com.google.protobuf"/>
             <trusted-key id="6BDACA2C0493CCA133B372D09C4F7E9D98B1CC53" group="org.apache" name="apache" version="15"/>
@@ -82,13 +82,13 @@
             <trusted-key id="7E22D50A7EBD9D2CD269B2D4056ACA74D46000BF" group="io.netty"/>
             <trusted-key id="7F36E793AE3252E5D9E9B98FEE9E7DC9D92FC896" group="com.google.errorprone" version="2.3.1"/>
             <trusted-key id="84789D24DF77A32433CE1F079EB80E92EB2135B1">
-                <trusting group="org.codehaus.mojo"/>
                 <trusting group="org.apache" name="apache" version="29"/>
+                <trusting group="org.codehaus.mojo"/>
             </trusted-key>
             <trusted-key id="8756C4F765C9AC3CB6B85D62379CE192D401AB61" group="org.jetbrains.intellij.deps" name="trove4j"/>
             <trusted-key id="90EE19787A7BCF6FD37A1E9180C08B1C29100955" group="com.squareup" name="javawriter"/>
             <trusted-key id="A413F67D71BEEC23ADD0CE0ACB43338E060CF9FA" group="org.jacoco"/>
-            <trusted-key id="A5BD02B93E7A40482EB1D66A5F69AD087600B22C" group="org.ow2.asm" />
+            <trusted-key id="A5BD02B93E7A40482EB1D66A5F69AD087600B22C" group="org.ow2.asm"/>
             <trusted-key id="A5F483CD733A4EBAEA378B2AE88979FB9B30ACF2">
                 <trusting group="androidx.databinding"/>
                 <trusting group="androidx.test"/>
@@ -132,13 +132,13 @@
             <trusted-key id="CE8075A251547BEE249BC151A2115AE15F6B8B72" group="org.apache.commons"/>
             <trusted-key id="D6F1BC78607808EC8E9F69437A8860944FAD5F62" group="org.apache.commons" name="commons-parent" version="34"/>
             <trusted-key id="DB0597E3144342256BC81E3EC727D053C4481CF5" group="org.tensorflow"/>
-            <trusted-key id="DBD744ACE7ADE6AA50DD591F66B50994442D2D40" group="com.squareup">
+            <trusted-key id="DBD744ACE7ADE6AA50DD591F66B50994442D2D40">
                 <trusting group="com.squareup"/>
                 <trusting group="com.squareup.moshi"/>
                 <trusting group="com.squareup.okio"/>
             </trusted-key>
             <trusted-key id="E77417AC194160A3FABD04969A259C7EE636C5ED" group="com.google.errorprone" version="2.11.0"/>
-            <trusted-key id="E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB" group="org.jetbrains.kotlinx" />
+            <trusted-key id="E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB" group="org.jetbrains.kotlinx"/>
             <trusted-key id="E82D2EAF2E83830CE1F7F6BE571A5291E827E1C7" group="net.java" name="jvnet-parent" version="3"/>
             <trusted-key id="E85AED155021AF8A6C6B7A4A7C7D8456294423BA" group="org.objenesis"/>
             <trusted-key id="EB1B3DE71713C9EC2E87CC26EE92349AD86DE446" group="com.google.j2objc"/>
