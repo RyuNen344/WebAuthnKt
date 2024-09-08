@@ -24,6 +24,7 @@
          <trusted-key id="0D35D3F60078655126908E8AF3D1600878E85A3D" group="io.netty"/>
          <trusted-key id="0F07D1201BDDAB67CFB84EB479752DB6C966F0B8" group="com.google.android" name="annotations"/>
          <trusted-key id="10F3C7A02ECA55E502BADCF3991EFB94DB91127D" group="org.ow2"/>
+         <trusted-key id="120D6F34E627ED3A772EBBFE55C7E5E701832382" group="org.yaml" name="snakeyaml"/>
          <trusted-key id="1597AB231B7ADD7E14B1D9C43F00DB67AE236E2E" group="org.conscrypt" name="conscrypt-openjdk-uber"/>
          <trusted-key id="190D5A957FF22273E601F7A7C92C5FEC70161C62" group="org.apache" name="apache" version="18"/>
          <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework"/>
@@ -33,8 +34,11 @@
             <trusting group="com.fasterxml"/>
             <trusting group="com.fasterxml.jackson"/>
             <trusting group="com.fasterxml.jackson.core"/>
+            <trusting group="com.fasterxml.jackson.dataformat"/>
             <trusting group="com.fasterxml.jackson.module"/>
+            <trusting group="com.fasterxml.woodstox"/>
          </trusted-key>
+         <trusted-key id="29BEA2A645F2D6CED7FB12E02B172E3E156466E8" group="org.apache.maven"/>
          <trusted-key id="2BAB4466B44F54F8F99BBBDD5ED22F661BBF0ACC" group="com.almworks.sqlite4java" name="sqlite4java"/>
          <trusted-key id="2BCBDD0F23EA1CAFCC11D4860374CF2E8DD1BDFD">
             <trusting group="net.java" name="jvnet-parent" version="1"/>
@@ -65,6 +69,7 @@
          <trusted-key id="517B94F8D0A46317A28D8AB30DA8A5EC02D11EAD" group="net.sf.jopt-simple"/>
          <trusted-key id="5767F9CDE920750621875079A40E24B5B408DBD5" group="org.robolectric"/>
          <trusted-key id="5897253BEA3046AEEA95A067E93671C7272B7B3F" group="org.jdom"/>
+         <trusted-key id="60200AC4AE761F1614D6C46766D68DAA073BE985" group="org.slf4j"/>
          <trusted-key id="6214760097DC5CFAD0175AC2C9FBAA83A8753994">
             <trusting group="com.fasterxml"/>
             <trusting group="com.fasterxml.jackson"/>
@@ -101,9 +106,12 @@
          </trusted-key>
          <trusted-key id="7E22D50A7EBD9D2CD269B2D4056ACA74D46000BF" group="io.netty"/>
          <trusted-key id="7F36E793AE3252E5D9E9B98FEE9E7DC9D92FC896" group="com.google.errorprone" version="2.3.1"/>
+         <trusted-key id="7FE5E98DF3A5C0DC34663AB7C1ADD37CA0069309" group="org.spdx"/>
          <trusted-key id="8461EFA0E74ABAE010DE66994EB27DB2A3B88B8B" group="androidx.annotation"/>
          <trusted-key id="84789D24DF77A32433CE1F079EB80E92EB2135B1">
             <trusting group="org.apache" name="apache" version="29"/>
+            <trusting group="org.apache" name="apache" version="31"/>
+            <trusting group="org.apache.maven" name="maven-parent" version="41"/>
             <trusting group="org.codehaus.mojo"/>
          </trusted-key>
          <trusted-key id="8756C4F765C9AC3CB6B85D62379CE192D401AB61">
@@ -158,7 +166,9 @@
          <trusted-key id="C89074FC8BE681B7C7EAAB6E4C5EED3C53B75933" group="org.skyscreamer" name="jsonassert" version="1.5.3"/>
          <trusted-key id="CB3190CA7842439E57F3712E44CE7BF2825EA2CD" group="com.ibm.icu"/>
          <trusted-key id="CC57399D74CD7E4768ED6FA4CA62973FBF0451C0" group="com.vaadin.external.google" name="android-json" version="0.0.20131108.vaadin1"/>
+         <trusted-key id="CD5464315F0B98C77E6E8ECD9DAADC1C9FCC82D0" group="org.apache.commons" name="commons-lang3" version="3.5"/>
          <trusted-key id="CE8075A251547BEE249BC151A2115AE15F6B8B72" group="org.apache.commons"/>
+         <trusted-key id="CF17E92C9FFA55316B5DB83901D734EE5EE9C3F8" group="org.eclipse.sisu"/>
          <trusted-key id="D477D51812E692011DB11E66A6EA2E2BF22E0543" group="io.github.java-diff-utils"/>
          <trusted-key id="D6F1BC78607808EC8E9F69437A8860944FAD5F62" group="org.apache.commons" name="commons-parent" version="34"/>
          <trusted-key id="DB0597E3144342256BC81E3EC727D053C4481CF5" group="org.tensorflow"/>
@@ -180,13 +190,20 @@
          <trusted-key id="E85AED155021AF8A6C6B7A4A7C7D8456294423BA" group="org.objenesis"/>
          <trusted-key id="EB1B3DE71713C9EC2E87CC26EE92349AD86DE446" group="com.google.j2objc"/>
          <trusted-key id="EE0CA873074092F806F59B65D364ABAA39A47320" group="com.google.errorprone"/>
-         <trusted-key id="F254B35617DC255D9344BCFA873A8E86B4372146" group="org.apache" name="apache" version="13"/>
+         <trusted-key id="F06E94A01B835825E6AB4DA369B8E32E23138662" group="org.spdx"/>
+         <trusted-key id="F254B35617DC255D9344BCFA873A8E86B4372146">
+            <trusting group="org.apache" name="apache" version="13"/>
+            <trusting group="org.codehaus.plexus"/>
+         </trusted-key>
+         <trusted-key id="F2CEF92DA169104244917A6B32AC66C4FBF15ECB" group="org.apache.commons" name="commons-parent" version="41"/>
          <trusted-key id="F3184BCD55F4D016E30D4C9BF42E87F9665015C9" group="org.jsoup"/>
          <trusted-key id="FA77DCFEF2EE6EB2DEBEDD2C012579464D01C06A">
             <trusting group="org.apache" name="apache" version="21"/>
             <trusting group="org.apache" name="apache" version="23"/>
+            <trusting group="org.codehaus.plexus" name="plexus"/>
          </trusted-key>
          <trusted-key id="FA7929F83AD44C4590F6CC6815C71C0A4E0B8EDD" group="net.java.dev.jna"/>
+         <trusted-key id="FB35C8D02B4724DADA23DE0AFD116C1969FCCFF3" group="org.json" name="json" version="20231013"/>
          <trusted-key id="FC411CD3CB7DCB0ABC9801058118B3BCDB1A5000" group="jakarta.xml.bind"/>
          <trusted-key id="FF6E2C001948C5F2F38B0CC385911F425EC61B51">
             <trusting group="junit" name="junit"/>
@@ -1086,47 +1103,47 @@
       </component>
       <component group="com.google.devtools.ksp" name="com.google.devtools.ksp.gradle.plugin" version="2.0.20-1.0.24">
          <artifact name="com.google.devtools.ksp.gradle.plugin-2.0.20-1.0.24.pom">
-            <sha256 value="87c29021ae0ae530f8172061ba407dcc3bd20f9fb83532a7026e0a378befb572" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="87c29021ae0ae530f8172061ba407dcc3bd20f9fb83532a7026e0a378befb572" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="com.google.devtools.ksp" name="symbol-processing" version="2.0.20-1.0.24">
          <artifact name="symbol-processing-2.0.20-1.0.24.jar">
-            <sha256 value="11b884411e738bce6a5e0d2ce29a715bc8c6016dcf5d42eb0e582195eeabb45c" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="11b884411e738bce6a5e0d2ce29a715bc8c6016dcf5d42eb0e582195eeabb45c" origin="Generated by Gradle"/>
          </artifact>
          <artifact name="symbol-processing-2.0.20-1.0.24.pom">
-            <sha256 value="a9814f96e1af71b2af4c54377b9804872e8dc440d3adc91bb6cbcc10d3aad9a0" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="a9814f96e1af71b2af4c54377b9804872e8dc440d3adc91bb6cbcc10d3aad9a0" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="com.google.devtools.ksp" name="symbol-processing-api" version="2.0.20-1.0.24">
          <artifact name="symbol-processing-api-2.0.20-1.0.24.jar">
-            <sha256 value="600cceab10129692b9fa188d4105e3ca400206ab848dd1c08ea09dc76cd270ef" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="600cceab10129692b9fa188d4105e3ca400206ab848dd1c08ea09dc76cd270ef" origin="Generated by Gradle"/>
          </artifact>
          <artifact name="symbol-processing-api-2.0.20-1.0.24.module">
-            <sha256 value="65fe1c2eb26899390b1018808dda05e9d88aec4bed37f715b1f5b4677d16f2e9" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="65fe1c2eb26899390b1018808dda05e9d88aec4bed37f715b1f5b4677d16f2e9" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="com.google.devtools.ksp" name="symbol-processing-cmdline" version="2.0.20-1.0.24">
          <artifact name="symbol-processing-cmdline-2.0.20-1.0.24.jar">
-            <sha256 value="a8c51acad36e13584833ada9fb7bbbf2d910595c6aa56e35617edf0aaee125f2" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="a8c51acad36e13584833ada9fb7bbbf2d910595c6aa56e35617edf0aaee125f2" origin="Generated by Gradle"/>
          </artifact>
          <artifact name="symbol-processing-cmdline-2.0.20-1.0.24.pom">
-            <sha256 value="a297b66b13d118db54938a28fefe757b7cf5fa6d1bfe6c9e60040027c140751a" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="a297b66b13d118db54938a28fefe757b7cf5fa6d1bfe6c9e60040027c140751a" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="com.google.devtools.ksp" name="symbol-processing-common-deps" version="2.0.20-1.0.24">
          <artifact name="symbol-processing-common-deps-2.0.20-1.0.24.jar">
-            <sha256 value="a0b739afd1bbe6f1c83aa507e9a1b1e1958ef924307e4d2a80408965e29b9336" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="a0b739afd1bbe6f1c83aa507e9a1b1e1958ef924307e4d2a80408965e29b9336" origin="Generated by Gradle"/>
          </artifact>
          <artifact name="symbol-processing-common-deps-2.0.20-1.0.24.module">
-            <sha256 value="95987a8aba64d442c13af9dc0aa41befa33f3e0f13970b86817e4b1f4e7393ab" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="95987a8aba64d442c13af9dc0aa41befa33f3e0f13970b86817e4b1f4e7393ab" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="com.google.devtools.ksp" name="symbol-processing-gradle-plugin" version="2.0.20-1.0.24">
          <artifact name="symbol-processing-gradle-plugin-2.0.20-1.0.24.jar">
-            <sha256 value="ee0a4de3cfa8f50db62b7eab51e94ecd32923926d62036e2798e3401d2ea44a6" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="ee0a4de3cfa8f50db62b7eab51e94ecd32923926d62036e2798e3401d2ea44a6" origin="Generated by Gradle"/>
          </artifact>
          <artifact name="symbol-processing-gradle-plugin-2.0.20-1.0.24.module">
-            <sha256 value="beb5e06bb431d4bcaa9d39849803eb6152cd57418b6bb70f401a7a67dc390ec5" origin="Generated by Gradle" reason="A key couldn't be downloaded"/>
+            <sha256 value="beb5e06bb431d4bcaa9d39849803eb6152cd57418b6bb70f401a7a67dc390ec5" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="com.google.errorprone" name="error_prone_annotation" version="2.19.1">
@@ -2172,6 +2189,19 @@
       <component group="org.eclipse.ee4j" name="project" version="1.0.5">
          <artifact name="project-1.0.5.pom">
             <sha256 value="916b4794d8d8220a59a3fdf6a64dbe794aeb23395e888b81ae36a9b5a2c591a6" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.sisu" name="org.eclipse.sisu.inject" version="0.9.0.M2">
+         <artifact name="org.eclipse.sisu.inject-0.9.0.M2.jar">
+            <sha256 value="9b62bcfc352a2ec87da8b01e37c952a54d358bbb1af3f212648aeafe7ab2dbb5" origin="Generated by Gradle"/>
+         </artifact>
+         <artifact name="org.eclipse.sisu.inject-0.9.0.M2.pom">
+            <sha256 value="05666f27941117ccadfab6329118c1c348f8b838ce89ed23182c151cb2943ee9" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.sisu" name="sisu-inject" version="0.9.0.M2">
+         <artifact name="sisu-inject-0.9.0.M2.pom">
+            <sha256 value="7630f4cd4d1620067fa83e1d748b012cffa0655e5380cc0e4a5e283d3b441fdb" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="org.glassfish.jaxb" name="jaxb-bom" version="2.3.2">
@@ -3233,9 +3263,22 @@
             <sha256 value="7e0747751e9b67e19dcb5206f04ea22cc03d250c422426402eadd03513f2c314" origin="Generated by Gradle"/>
          </artifact>
       </component>
+      <component group="org.slf4j" name="slf4j-api" version="2.0.7">
+         <artifact name="slf4j-api-2.0.7.jar">
+            <sha256 value="5d6298b93a1905c32cda6478808ac14c2d4a47e91535e53c41f7feeb85d946f4" origin="Generated by Gradle"/>
+         </artifact>
+         <artifact name="slf4j-api-2.0.7.pom">
+            <sha256 value="2d403ccf0e0a02d5c1a8667b0e2a33c8dfc6038ab287b9671dd681c205267981" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
       <component group="org.slf4j" name="slf4j-parent" version="1.7.30">
          <artifact name="slf4j-parent-1.7.30.pom">
             <sha256 value="11647956e48a0c5bfb3ac33f6da7e83f341002b6857efd335a505b687be34b75" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.slf4j" name="slf4j-parent" version="2.0.7">
+         <artifact name="slf4j-parent-2.0.7.pom">
+            <sha256 value="c182bb36cd3af1c93c1603cdfefe7889157db30ba8b584f4a44535fcd22e45e7" origin="Generated by Gradle"/>
          </artifact>
       </component>
       <component group="org.sonatype.oss" name="oss-parent" version="4">
@@ -3251,6 +3294,19 @@
       <component group="org.sonatype.oss" name="oss-parent" version="9">
          <artifact name="oss-parent-9.pom">
             <sha256 value="fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.spdx" name="spdx-gradle-plugin" version="0.8.0">
+         <artifact name="spdx-gradle-plugin-0.8.0.jar">
+            <sha256 value="a6f330f094413f43cf370261fa12127f8ddca26254a966993afa9595b3c858a9" origin="Generated by Gradle"/>
+         </artifact>
+         <artifact name="spdx-gradle-plugin-0.8.0.module">
+            <sha256 value="9515685d89712c7e6b6c85bf066ccb8593e85f9054d4b2e263f8aeb38db30ff9" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.spdx.sbom" name="org.spdx.sbom.gradle.plugin" version="0.8.0">
+         <artifact name="org.spdx.sbom.gradle.plugin-0.8.0.pom">
+            <sha256 value="4ba7a011f376b1f6fb6a5ef621186e2c3e7b5d380b491cd1da23c013f7fa50f2" origin="Generated by Gradle" reason="Artifact is not signed"/>
          </artifact>
       </component>
       <component group="org.tensorflow" name="tensorflow-lite-metadata" version="0.1.0-rc2">
