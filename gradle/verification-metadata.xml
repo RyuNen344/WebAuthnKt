@@ -12,6 +12,7 @@
                 <trusting group="com.gradle"/>
                 <trusting group="com.gradle" name="develocity-gradle-plugin"/>
                 <trusting group="org.gradle"/>
+                <trusting group="org.gradle" name="github-dependency-graph-gradle-plugin"/>
             </trusted-key>
             <trusted-key id="A5F483CD733A4EBAEA378B2AE88979FB9B30ACF2">
                 <trusting group="com.android" name="signflinger"/>
@@ -37,10 +38,12 @@
             </trusted-key>
             <trusted-key id="E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB" group="org.jetbrains.kotlinx" />
             <trusted-key id="04543577D6A9CC626239C50C7ECBD740FF06AEB5">
+                <trusting group="com.sun.istack"/>
                 <trusting group="com.sun.xml.bind"/>
                 <trusting group="com.sun.xml.bind.mvn"/>
                 <trusting group="com.sun.xml.fastinfoset"/>
-                <trusting group="com.sun.istack"/>
+                <trusting group="org.glassfish.jaxb"/>
+                <trusting group="org.jvnet.staxex"/>
             </trusted-key>
             <trusted-key id="4F7E32D440EF90A83011A8FC6425559C47CC79C4">
                 <trusting group="com.sun.activation"/>
@@ -68,10 +71,6 @@
                 <trusting group="commons-codec"/>
                 <trusting group="commons-io"/>
                 <trusting group="org.apache.commons"/>
-            </trusted-key>
-            <trusted-key id="04543577D6A9CC626239C50C7ECBD740FF06AEB5">
-                <trusting group="org.glassfish.jaxb"/>
-                <trusting group="org.jvnet.staxex"/>
             </trusted-key>
             <trusted-key id="0F07D1201BDDAB67CFB84EB479752DB6C966F0B8" group="com.google.android" name="annotations"/>
             <trusted-key id="6F7E5ACBCD02DB60DFD232E45E1F79A7C298661E" group="com.google.auto"/>
