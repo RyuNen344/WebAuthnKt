@@ -13,7 +13,7 @@ runs:
       shell: bash
       run: |
         mkdir -p ~/.gradle/init.d \;
-        \cp -rf ./gradle/cache-settings.gradle ~/.gradle/init.d \;
+        \cp -rf ./.github/actions/gradle/cache-settings.gradle ~/.gradle/init.d \;
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
