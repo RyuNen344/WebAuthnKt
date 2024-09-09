@@ -36,6 +36,18 @@ jobs:
           sarif_file: ${{ runner.temp }}/qodana.sarif
           category: qodana:jvm-android
 
+  dependency-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+        with:
+          dependency-graph: 'generate-and-submit'
+      - name: submit dependency graph
+        shell: bash
+        run: |
+          ./gradlew resolveAllDependencies --scan
+
   publish:
     runs-on: ubuntu-latest
     steps:

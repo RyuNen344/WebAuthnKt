@@ -25,6 +25,27 @@ jobs:
         with:
           cache-default-branch-only: true
 
+  dependency-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+      - uses: actions/dependency-review-action@v4
+      - name: check dependency graph
+        shell: bash
+        run: |
+          ./gradlew --write-verification-metadata sha256 resolveAllDependencies --scan
+      - name: check verification-metadata.xml diff
+        shell: bash
+        run: |
+          if [ -n "$(git diff --name-only HEAD | grep -Fx gradle/verification-metadata.xml)" ]; then
+            echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
+            echo "$(git status --porcelain)" | while read -r l; do echo "::error::$l"; done;
+            exit 1
+          else
+            echo "::notice::verification-metadata.xml is up-to-date";
+          fi
+
   publish:
     runs-on: ubuntu-latest
     steps:

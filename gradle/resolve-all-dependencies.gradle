@@ -1,0 +1,131 @@
+import org.gradle.internal.component.local.model.DefaultProjectComponentSelector
+import org.gradle.internal.serialization.Cached
+import org.gradle.work.DisableCachingByDefault
+
+import java.lang.reflect.Method
+
+@DisableCachingByDefault(because = "Not worth caching")
+abstract class ResolveProjectDependencyTask extends DefaultTask {
+
+    ResolveProjectDependencyTask() {
+        group = "dependency"
+        description = "Resolve Project Dependencies"
+    }
+
+    @OutputFile
+    final abstract RegularFileProperty outputFile = project.objects.fileProperty().convention(
+        project.layout.buildDirectory.dir("reports").map { it.dir("dependency") }.map { it.file("resolved-dependencies.txt") }
+    )
+
+    @Internal
+    Cached<List<Provider<ResolvedComponentResult>>> configurationResolvers = Cached.of {
+        getConfigurations().collect { configuration -> configuration.incoming.resolutionResult.rootComponent }
+    }
+
+    @Internal
+    List<Configuration> getConfigurations() {
+        def canSafelyBeResolvedMethod = getCanSafelyBeResolvedMethod()
+        return project.configurations.findAll {
+            canSafelyBeResolved(canSafelyBeResolvedMethod, it)
+        }.toList()
+    }
+
+    @TaskAction
+    void action() {
+        def outputFile = outputFile.get().asFile
+        if (outputFile.exists()) {
+            outputFile.delete()
+        }
+        outputFile.createNewFile()
+
+        def resolvedDependencies = configurationResolvers.get()
+            .collect { it.get().getDependencies() }
+            .flatten()
+            .findAll { !(it.getRequested() instanceof DefaultProjectComponentSelector) }
+            .unique { a, b -> a.toString() <=> b.toString() }
+            .sort { a -> a.toString() }
+
+        outputFile.withWriter { writer ->
+            resolvedDependencies.forEach { dependency ->
+                writer.writeLine("$dependency")
+            }
+        }
+    }
+
+    static boolean canSafelyBeResolved(Method canSafelyBeResolvedMethod, Configuration configuration) {
+        if (canSafelyBeResolvedMethod != null) {
+            try {
+                return canSafelyBeResolvedMethod.invoke(configuration)
+            } catch (ReflectiveOperationException ignored) {
+                return false
+            }
+        }
+        return configuration.canBeResolved
+    }
+
+    static Method getCanSafelyBeResolvedMethod() {
+        try {
+            def dc = Class.forName("org.gradle.internal.deprecation.DeprecatableConfiguration")
+            return dc.getMethod("canSafelyBeResolved")
+        } catch (ReflectiveOperationException e) {
+            return null
+        }
+    }
+}
+
+@DisableCachingByDefault(because = "Not worth caching")
+abstract class ResolveAllDependenciesTask extends DefaultTask {
+
+    ResolveAllDependenciesTask() {
+        group = "dependency"
+        description = "Resolve All Project Dependencies"
+    }
+
+    @OutputFile
+    final abstract RegularFileProperty outputFile = project.objects.fileProperty().convention(
+        project.layout.buildDirectory.dir("reports").map { it.dir("dependency") }.map { it.file("resolved-dependencies.txt") }
+    )
+
+    @InputFiles
+    final abstract ConfigurableFileCollection inputFiles = project.objects.fileCollection()
+
+    @TaskAction
+    void action() {
+        def outputFile = outputFile.get().asFile
+        if (outputFile.exists()) {
+            outputFile.delete()
+        }
+        outputFile.createNewFile()
+
+        def inputFiles = inputFiles.files
+        if (inputFiles.isEmpty()) return
+
+        def resolvedDependencies = inputFiles
+            .collect { file -> file.readLines() }
+            .flatten()
+            .unique()
+            .sort()
+
+        outputFile.withWriter { writer ->
+            resolvedDependencies.forEach { dependency ->
+                writer.writeLine("$dependency")
+            }
+        }
+    }
+}
+
+gradle.projectsEvaluated {
+    def resolveAllDepTask = gradle.rootProject.tasks.register("resolveAllDependencies", ResolveAllDependenciesTask)
+    def outputs = []
+    gradle.allprojects { project ->
+        if (project == gradle.rootProject) return
+        def resolveProjectDependencyTask = project.tasks.register("resolveProjectDependencies", ResolveProjectDependencyTask)
+        outputs += resolveProjectDependencyTask.get().outputs.files.singleFile
+        resolveAllDepTask.configure {
+            dependsOn(resolveProjectDependencyTask)
+        }
+    }
+    resolveAllDepTask.configure {
+        inputFiles.from(outputs)
+    }
+}
