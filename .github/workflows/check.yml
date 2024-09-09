@@ -25,6 +25,16 @@ jobs:
         with:
           cache-default-branch-only: true
 
+  dependency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/gradle
+      - name: check publish task
+        shell: bash
+        run: |
+          ./gradlew ForceDependencyResolutionPlugin_resolveAllDependencies
+
   publish:
     runs-on: ubuntu-latest
     steps:
