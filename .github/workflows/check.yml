@@ -25,15 +25,26 @@ jobs:
         with:
           cache-default-branch-only: true
 
-  dependency:
+  dependency-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/gradle
-      - name: check publish task
+      - uses: actions/dependency-review-action@v4
+      - name: check dependency graph
         shell: bash
         run: |
-          ./gradlew ForceDependencyResolutionPlugin_resolveAllDependencies
+          ./gradlew --write-verification-metadata sha256 resolveAllDependencies --scan
+      - name: check verification-metadata.xml diff
+        shell: bash
+        run: |
+          if [ -n "$(git diff --name-only HEAD | grep -Fx gradle/verification-metadata.xml)" ]; then
+            echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
+            echo "$(git status --porcelain)" | while read -r l; do echo "::error::$l"; done;
+            exit 1
+          else
+            echo "::notice::verification-metadata.xml is up-to-date";
+          fi
 
   publish:
     runs-on: ubuntu-latest
@@ -43,8 +54,7 @@ jobs:
       - name: check publish task
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 publishReleasePublicationToLocalRepository --scan
-      - uses: ./.github/actions/metadata
+          ./gradlew publishReleasePublicationToLocalRepository --scan
 
   test:
     runs-on: ubuntu-latest
@@ -63,7 +73,7 @@ jobs:
       - name: unit test
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 :${{ matrix.module }}:testDebugUnitTest --scan
+          ./gradlew :${{ matrix.module }}:testDebugUnitTest --scan
       - uses: EnricoMi/publish-unit-test-result-action@v2
         if: ${{ !cancelled() }}
         with:
@@ -74,8 +84,7 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 :${{ matrix.module }}:jacoco --scan
-      - uses: ./.github/actions/metadata
+          ./gradlew :${{ matrix.module }}:jacoco --scan
       - uses: madrapps/jacoco-report@v1.7.0
         if: ${{ !cancelled() }}
         with:
@@ -95,8 +104,7 @@ jobs:
       - name: check api file
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 apiCheck --scan
-      - uses: ./.github/actions/metadata
+          ./gradlew apiCheck --scan
 
   fixture:
     runs-on: ubuntu-latest

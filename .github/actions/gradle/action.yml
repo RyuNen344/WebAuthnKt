@@ -1,5 +1,12 @@
 name: "setup gradle"
 description: "setup gradle"
+inputs:
+  dependency-graph:
+    description: |
+      Specifies if a GitHub dependency snapshot should be generated for each Gradle build, and if so, how.
+      Valid values are 'disabled' (default), 'generate', 'generate-and-submit', 'generate-and-upload', and 'download-and-submit'.
+    required: false
+    default: "disabled"
 runs:
   using: "composite"
   steps:
@@ -20,7 +27,7 @@ runs:
       with:
         gradle-version: wrapper
         gradle-home-cache-cleanup: true
-        dependency-graph: generate-and-submit
+        dependency-graph: ${{ inputs.dependency-graph }}
 
     - name: list toolchain
       shell: bash
