@@ -5,6 +5,8 @@ plugins {
     alias libs.plugins.org.spdx.sbom apply false
 }
 
+apply from: rootProject.layout.projectDirectory.file("gradle/resolve-all-dependencies.gradle")
+
 tasks.register('clean', Delete) {
     group = "clean"
     delete(rootProject.layout.buildDirectory.get())
