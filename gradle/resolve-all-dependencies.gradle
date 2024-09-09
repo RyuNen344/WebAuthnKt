@@ -176,6 +176,7 @@ gradle.projectsEvaluated {
         outputs += resolveProjectClasspathTask.get().outputs.files.singleFile
         outputs += resolveProjectDependencyTask.get().outputs.files.singleFile
         resolveAllDepTask.configure {
+            dependsOn(resolveProjectClasspathTask)
             dependsOn(resolveProjectDependencyTask)
         }
     }
