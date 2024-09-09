@@ -33,7 +33,8 @@ jobs:
       - name: check publish task
         shell: bash
         run: |
-          ./gradlew publishReleasePublicationToLocalRepository --scan
+          ./gradlew --write-verification-metadata sha256 publishReleasePublicationToLocalRepository --scan
+      - uses: ./.github/actions/metadata
 
   test:
     runs-on: ubuntu-latest
@@ -52,7 +53,7 @@ jobs:
       - name: unit test
         shell: bash
         run: |
-          ./gradlew :${{ matrix.module }}:testDebugUnitTest --scan
+          ./gradlew --write-verification-metadata sha256 :${{ matrix.module }}:testDebugUnitTest --scan
       - uses: EnricoMi/publish-unit-test-result-action@v2
         if: ${{ !cancelled() }}
         with:
@@ -63,7 +64,8 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
         run: |
-          ./gradlew :${{ matrix.module }}:jacoco --scan
+          ./gradlew --write-verification-metadata sha256 :${{ matrix.module }}:jacoco --scan
+      - uses: ./.github/actions/metadata
       - uses: madrapps/jacoco-report@v1.7.0
         if: ${{ !cancelled() }}
         with:
@@ -83,7 +85,8 @@ jobs:
       - name: check api file
         shell: bash
         run: |
-          ./gradlew apiCheck --scan
+          ./gradlew --write-verification-metadata sha256 apiCheck --scan
+      - uses: ./.github/actions/metadata
 
   fixture:
     runs-on: ubuntu-latest
