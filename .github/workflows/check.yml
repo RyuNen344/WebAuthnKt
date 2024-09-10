@@ -39,7 +39,6 @@ jobs:
         shell: bash
         run: |
           echo "::notice::start diff verification-metadata.xml"
-          cat gradle/verification-metadata.xml
           cat gradle/verification-metadata.dryrun.xml
           result="$(diff gradle/verification-metadata.xml gradle/verification-metadata.xml)"
           echo "::notice::start diff verification-metadata.xml"
