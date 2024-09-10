@@ -9,12 +9,22 @@ if (localPropertyFile.exists()) {
 }
 
 group = "io.github.ryunen344.webauthn"
-version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.orNull?.trim() ?: "snapshot"
+version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.getOrElse("snapshot").trim()
+description = project.findProperty("POM_DESCRIPTION")
 
 spdxSbom {
     targets {
         release {
             configurations.add("releaseRuntimeClasspath")
+            scm {
+                tool.set("git")
+                uri.set("https://github.com/RyuNen344/WebAuthnKt.git")
+                revision.set(version)
+            }
+            document {
+                namespace.set("https://github.com/RyuNen344/WebAuthnKt/spdxdocs/${UUID.randomUUID()}")
+                creator.set("Person:RyuNen344")
+            }
         }
     }
 }
