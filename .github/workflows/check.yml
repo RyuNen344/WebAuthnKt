@@ -30,11 +30,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/gradle
-      - uses: actions/dependency-review-action@v4
       - name: check dependency graph
         shell: bash
         run: |
           ./gradlew --write-verification-metadata sha256 resolveAllDependencies --dry-run --scan
+      - uses: actions/dependency-review-action@v4
       - name: check verification-metadata.xml diff
         shell: bash
         run: |
