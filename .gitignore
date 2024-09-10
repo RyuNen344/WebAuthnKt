@@ -39,6 +39,7 @@ out/
 build/
 releases/
 local.properties
+gradle/verification-metadata.dryrun.xml
 
 # ci
 artifact/
