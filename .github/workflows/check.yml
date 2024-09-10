@@ -34,13 +34,15 @@ jobs:
       - name: check dependency graph
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 resolveAllDependencies --scan
+          ./gradlew --write-verification-metadata sha256 resolveAllDependencies --dry-run --scan
       - name: check verification-metadata.xml diff
         shell: bash
         run: |
-          if [ -n "$(git diff --name-only HEAD | grep -Fx gradle/verification-metadata.xml)" ]; then
-            echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
-            echo "$(git status --porcelain)" | while read -r l; do echo "::error::$l"; done;
+          if [ -n "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)" ]; then
+            echo "::error::verification-metadata.xml must have updates. Please run check and commit the changes";
+            echo "::group::diff";
+            echo "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)";
+            echo "::endgroup::";
             exit 1
           else
             echo "::notice::verification-metadata.xml is up-to-date";
