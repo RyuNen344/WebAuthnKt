@@ -38,6 +38,7 @@ jobs:
       - name: check verification-metadata.xml diff
         shell: bash
         run: |
+          diff --help
           result=$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)
           if [ -n "$result" ]; then
             echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
