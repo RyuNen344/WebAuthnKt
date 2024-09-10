@@ -39,12 +39,11 @@ jobs:
         shell: bash
         run: |
           echo "::notice::start diff verification-metadata.xml"
-          diffs=$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)
           echo "::notice::hogefugahoge"
-          if [ -n "diffs" ]; then
+          if [ -n "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)" ]; then
             echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
             echo "::group::diff"
-            echo "diffs"
+            echo "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)"
             echo "::endgroup::"
             exit 1
           else
