@@ -5,6 +5,7 @@
 
 ### Features
 
+* support sbom export
 * check verificaiton-metadata on dependabot PR ([#191](https://github.com/RyuNen344/WebAuthnKt/issues/191)) ([03a6f95](https://github.com/RyuNen344/WebAuthnKt/commit/03a6f957d3aadf223f43768be8e6d34a500676d3))
 * refine resolve task ([#194](https://github.com/RyuNen344/WebAuthnKt/issues/194)) ([6d0f14e](https://github.com/RyuNen344/WebAuthnKt/commit/6d0f14ee8cb80a52758f3aa7b85a1ccda46538ea))
 * setup sbom info ([#200](https://github.com/RyuNen344/WebAuthnKt/issues/200)) ([5bea829](https://github.com/RyuNen344/WebAuthnKt/commit/5bea8291073d29a07b10f8f7b4276bd2963199d0))
