@@ -24,7 +24,6 @@ jobs:
       - name: enable auto-merge
         shell: bash
         run:
-#          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
-          echo "enable later"
+          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
