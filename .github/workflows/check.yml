@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           echo "::notice::start diff verification-metadata.xml"
-          result=$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)
+          result="$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)"
           echo "::notice::start diff verification-metadata.xml"
           if [ -n "$result" ]; then
             echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
