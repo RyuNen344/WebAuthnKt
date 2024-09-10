@@ -12,6 +12,7 @@
 .idea/compiler.xml
 .idea/.name
 .idea/git_toolbox_prj.xml
+.idea/git_toolbox_blame.xml
 .idea/gradle.xml
 .idea/jarRepositories.xml
 .idea/kotlinc.xml
@@ -38,6 +39,7 @@ out/
 build/
 releases/
 local.properties
+gradle/verification-metadata.dryrun.xml
 
 # ci
 artifact/

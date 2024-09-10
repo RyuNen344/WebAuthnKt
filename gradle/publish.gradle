@@ -1,5 +1,6 @@
 pluginManager.apply("maven-publish")
 pluginManager.apply("signing")
+pluginManager.apply("org.spdx.sbom")
 
 def localProperty = new Properties()
 def localPropertyFile = new File(rootDir, "local.properties")
@@ -10,7 +11,25 @@ if (localPropertyFile.exists()) {
 group = "io.github.ryunen344.webauthn"
 version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.orNull?.trim() ?: "snapshot"
 
+spdxSbom {
+    targets {
+        release {
+            configurations.add("releaseRuntimeClasspath")
+        }
+    }
+}
+
 afterEvaluate {
+    def sbomTask = tasks.getByName("spdxSbomForRelease")
+    def sbomCfg = configurations.maybeCreate("spdxSbomForRelease")
+    def sbomArtifact = artifacts.add(sbomCfg.name, sbomTask.outputs.files.singleFile) {
+        type = "sbom"
+        extension = "spdx.json"
+        builtBy(sbomTask)
+    }
+    // publish sbomArtifact
+    print("publish sbomArtifact: ${sbomArtifact}")
+
     publishing {
         publications {
             release(MavenPublication) {
@@ -39,6 +58,7 @@ afterEvaluate {
                     }
                 }
                 from components.release
+                artifact sbomArtifact
             }
         }
         repositories {

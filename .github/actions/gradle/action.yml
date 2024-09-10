@@ -1,5 +1,12 @@
 name: "setup gradle"
 description: "setup gradle"
+inputs:
+  dependency-graph:
+    description: |
+      Specifies if a GitHub dependency snapshot should be generated for each Gradle build, and if so, how.
+      Valid values are 'disabled' (default), 'generate', 'generate-and-submit', 'generate-and-upload', and 'download-and-submit'.
+    required: false
+    default: "disabled"
 runs:
   using: "composite"
   steps:
@@ -13,17 +20,14 @@ runs:
       shell: bash
       run: |
         mkdir -p ~/.gradle/init.d \;
-        \cp -rf ./gradle/cache-settings.gradle ~/.gradle/init.d \;
-
-    - name: validate wrapper
-      uses: gradle/actions/wrapper-validation@v4
+        \cp -rf ./.github/actions/gradle/cache-settings.gradle ~/.gradle/init.d \;
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
       with:
         gradle-version: wrapper
-        gradle-home-cache-cleanup: true
-        dependency-graph: generate-and-submit
+        cache-cleanup: always
+        dependency-graph: ${{ inputs.dependency-graph }}
 
     - name: list toolchain
       shell: bash

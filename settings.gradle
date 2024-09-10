@@ -2,7 +2,27 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
-        gradlePluginPortal()
+        gradlePluginPortal {
+            content {
+                includeModule("com.gradle", "develocity-gradle-plugin")
+                includeModule(
+                    "com.gradle.develocity",
+                    "com.gradle.develocity.gradle.plugin"
+                )
+                includeModule("io.github.gradle-nexus", "publish-plugin")
+                includeModule(
+                    "io.github.gradle-nexus.publish-plugin",
+                    "io.github.gradle-nexus.publish-plugin.gradle.plugin"
+                )
+                includeModule("org.gradle", "github-dependency-graph-gradle-plugin")
+                includeModule(
+                    "org.gradle.github-dependency-graph-gradle-plugin",
+                    "org.gradle.github-dependency-graph-gradle-plugin.gradle.plugin"
+                )
+                includeModule("org.spdx", "spdx-gradle-plugin")
+                includeModule("org.spdx.sbom", "org.spdx.sbom.gradle.plugin")
+            }
+        }
     }
 }
 
@@ -13,7 +33,13 @@ plugins {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
         mavenCentral()
     }
 }

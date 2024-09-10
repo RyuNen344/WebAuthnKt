@@ -38,3 +38,4 @@ nexus-publish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 org-jetbrains-kotlinx-compatibility = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.16.3" }
+org-spdx-sbom = { id = "org.spdx.sbom", version = "0.8.0" }

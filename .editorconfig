@@ -19,6 +19,9 @@ indent_size=2
 [{*.toml,*.yaml,*.yml}]
 indent_size=2
 
+[gradle/verification-metadata.*xml]
+indent_size=3
+
 [{Dangerfile*,Fastfile,Gemfile}]
 indent_size=2
 
