@@ -41,7 +41,9 @@ jobs:
           result=$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)
           if [ -n "$result" ]; then
             echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
-            echo "$result" | while read -r l; do echo "::error::$l"; done;
+            echo "::group::diff"
+            echo "$result"
+            echo "::endgroup::"
             exit 1
           else
             echo "::notice::verification-metadata.xml is up-to-date";
