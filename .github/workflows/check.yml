@@ -38,13 +38,14 @@ jobs:
       - name: check verification-metadata.xml diff
         shell: bash
         run: |
-          echo "::notice::start diff verification-metadata.xml"
-          echo "::notice::hogefugahoge"
-          if [ -n "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)" ]; then
-            echo "::error::verification-metadata.xml has updates. Please run check and commit the changes";
-            echo "::group::diff"
-            echo "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)"
-            echo "::endgroup::"
+          echo "::notice::start diff verification-metadata.xml";
+          DIFF=$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml);
+          echo "::notice::hogefugahoge";
+          if [ -n "$DIFF" ]; then
+            echo "::error::verification-metadata.xml must have updates. Please run check and commit the changes";
+            echo "::group::diff";
+            echo "$DIFF";
+            echo "::endgroup::";
             exit 1
           else
             echo "::notice::verification-metadata.xml is up-to-date";
