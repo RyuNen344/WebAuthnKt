@@ -40,6 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
         with:
           dependency-graph: 'generate-and-submit'
@@ -52,6 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: check publish task
         shell: bash
@@ -71,6 +73,7 @@ jobs:
         module: [ "webauthn2-json-moshi", "webauthn2-json-serialization" ]
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: unit test
         shell: bash
@@ -102,6 +105,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: check api file
         shell: bash

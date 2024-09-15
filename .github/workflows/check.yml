@@ -29,13 +29,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/gradle
-      - name: check dependency graph
+      - uses: ./.github/actions/java
+      - uses: gradle/actions/wrapper-validation@v4
+      - uses: actions/dependency-review-action@v4
+      - name: check dependency graph(checksum)
         shell: bash
         run: |
           ./gradlew --write-verification-metadata sha256 resolveAllDependencies --dry-run --scan
-      - uses: actions/dependency-review-action@v4
-      - name: check verification-metadata.xml diff
+      - name: check verification-metadata.xml diff(checksum)
+        shell: bash
+        run: |
+          if [ -n "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)" ]; then
+            echo "::error::verification-metadata.xml must have updates. Please run check and commit the changes";
+            echo "::group::diff";
+            echo "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)";
+            echo "::endgroup::";
+            exit 1
+          else
+            echo "::notice::verification-metadata.xml is up-to-date";
+          fi
+      - name: check dependency graph(signature)
+        shell: bash
+        run: |
+          ./gradlew --write-verification-metadata pgp,sha256 resolveAllDependencies --dry-run --scan
+      - name: check verification-metadata.xml diff(signature)
         shell: bash
         run: |
           if [ -n "$(diff gradle/verification-metadata.xml gradle/verification-metadata.dryrun.xml)" ]; then
@@ -52,6 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: check publish task
         shell: bash
@@ -71,6 +89,7 @@ jobs:
         module: [ "webauthn2-json-moshi", "webauthn2-json-serialization" ]
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: unit test
         shell: bash
@@ -102,6 +121,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: check api file
         shell: bash

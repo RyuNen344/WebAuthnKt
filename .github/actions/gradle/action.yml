@@ -10,12 +10,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: setup JDK
-      uses: actions/setup-java@v4
-      with:
-        distribution: "temurin"
-        java-version: "17"
-
     - name: setup gradle cache limit
       shell: bash
       run: |
