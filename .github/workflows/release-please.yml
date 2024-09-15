@@ -33,7 +33,7 @@ jobs:
           SIGNING_ENABLED: ${{ secrets.SIGNING_ENABLED }}
         shell: bash
         run: |
-          ./gradlew publishReleasePublicationToLocalRepository --scan
+          ./gradlew publishReleasePublicationToLocalRepository --no-daemon --scan
       - name: zip artifacts
         if: ${{ steps.release.outputs.release_created }}
         shell: bash

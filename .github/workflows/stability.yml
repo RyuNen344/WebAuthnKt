@@ -47,7 +47,7 @@ jobs:
       - name: submit dependency graph
         shell: bash
         run: |
-          ./gradlew resolveAllDependencies --scan
+          ./gradlew resolveAllDependencies --no-daemon --scan
 
   publish:
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
       - name: check publish task
         shell: bash
         run: |
-          ./gradlew publishReleasePublicationToLocalRepository --scan
+          ./gradlew publishReleasePublicationToLocalRepository --no-daemon --scan
 
   test:
     runs-on: ubuntu-latest
@@ -78,7 +78,7 @@ jobs:
       - name: unit test
         shell: bash
         run: |
-          ./gradlew :${{ matrix.module }}:testDebugUnitTest --scan
+          ./gradlew :${{ matrix.module }}:testDebugUnitTest --no-daemon --scan
       - uses: EnricoMi/publish-unit-test-result-action@v2
         if: ${{ !cancelled() }}
         with:
@@ -89,7 +89,7 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
         run: |
-          ./gradlew :${{ matrix.module }}:jacoco --scan
+          ./gradlew :${{ matrix.module }}:jacoco --no-daemon --scan
       - uses: madrapps/jacoco-report@v1.7.0
         if: ${{ !cancelled() }}
         with:
@@ -110,7 +110,7 @@ jobs:
       - name: check api file
         shell: bash
         run: |
-          ./gradlew apiCheck --scan
+          ./gradlew apiCheck --no-daemon --scan
 
   fixture:
     runs-on: ubuntu-latest
