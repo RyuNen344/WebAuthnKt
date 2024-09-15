@@ -7,20 +7,9 @@ inputs:
       Valid values are 'disabled' (default), 'generate', 'generate-and-submit', 'generate-and-upload', and 'download-and-submit'.
     required: false
     default: "disabled"
-  toolchain:
-    description: |
-      if provides true, run `gradlew -q javaToolchains`
-    required: false
-    default: 'true'
 runs:
   using: "composite"
   steps:
-    - name: setup JDK
-      uses: actions/setup-java@v4
-      with:
-        distribution: "temurin"
-        java-version: "17"
-
     - name: setup gradle cache limit
       shell: bash
       run: |
@@ -35,7 +24,6 @@ runs:
         dependency-graph: ${{ inputs.dependency-graph }}
 
     - name: list toolchain
-      if: ${{ inputs.toolchain == 'true' }}
       shell: bash
       run: |
         ./gradlew -q javaToolchains

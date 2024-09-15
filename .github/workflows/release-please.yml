@@ -18,6 +18,8 @@ jobs:
         id: release
       - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
+      - uses: ./.github/actions/java
+        if: ${{ steps.release.outputs.release_created }}
       - uses: ./.github/actions/gradle
         if: ${{ steps.release.outputs.release_created }}
       - name: generate artifacts
