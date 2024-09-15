@@ -26,4 +26,4 @@ runs:
     - name: list toolchain
       shell: bash
       run: |
-        ./gradlew -q javaToolchains
+        ./gradlew -q javaToolchains --no-daemon
