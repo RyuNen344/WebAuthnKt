@@ -30,6 +30,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/gradle
+        with:
+          toolchain: 'false'
       - name: check dependency graph
         shell: bash
         run: |

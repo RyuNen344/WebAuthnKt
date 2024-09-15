@@ -7,6 +7,11 @@ inputs:
       Valid values are 'disabled' (default), 'generate', 'generate-and-submit', 'generate-and-upload', and 'download-and-submit'.
     required: false
     default: "disabled"
+  toolchain:
+    description: |
+      if provides true, run `gradlew -q javaToolchains`
+    required: false
+    default: 'true'
 runs:
   using: "composite"
   steps:
@@ -30,6 +35,7 @@ runs:
         dependency-graph: ${{ inputs.dependency-graph }}
 
     - name: list toolchain
+      if: ${{ inputs.toolchain == 'true' }}
       shell: bash
       run: |
         ./gradlew -q javaToolchains
