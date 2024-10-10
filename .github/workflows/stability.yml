@@ -49,6 +49,10 @@ jobs:
         shell: bash
         run: |
           ./gradlew resolveAllDependencies --no-daemon --scan
+      - name: remove redundant report json
+        shell: bash
+        run: |
+          rm -f dependency-graph-reports/stability-dependency-report.json
 
   publish:
     runs-on: ubuntu-latest
