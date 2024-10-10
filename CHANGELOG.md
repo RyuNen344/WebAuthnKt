@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.1.0-alpha02](https://github.com/RyuNen344/WebAuthnKt/compare/1.1.0-alpha01...1.1.0-alpha02) (2024-10-10)
+
+
+### Dependency Updates
+
+* **github-actions:** bump madrapps/jacoco-report from 1.7.0 to 1.7.1 ([#209](https://github.com/RyuNen344/WebAuthnKt/issues/209)) ([386de19](https://github.com/RyuNen344/WebAuthnKt/commit/386de19968777a5d2cd197096d06000de9479b54))
+* **gradle:** bump agp from 8.6.0 to 8.7.0 ([#218](https://github.com/RyuNen344/WebAuthnKt/issues/218)) ([a90c07f](https://github.com/RyuNen344/WebAuthnKt/commit/a90c07fdfda2b3a1bfa6318b1ba957a4ac3c2776))
+* **gradle:** bump com.fasterxml.jackson.core:jackson-databind ([#217](https://github.com/RyuNen344/WebAuthnKt/issues/217)) ([336a24b](https://github.com/RyuNen344/WebAuthnKt/commit/336a24b2a8cca512f80d65acb9769933ef8d83ce))
+* **gradle:** bump com.gradle.develocity from 3.18 to 3.18.1 ([#201](https://github.com/RyuNen344/WebAuthnKt/issues/201)) ([5b4d933](https://github.com/RyuNen344/WebAuthnKt/commit/5b4d9334c27c7d1d4ef77e5c30ebd4706c28b672))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#220](https://github.com/RyuNen344/WebAuthnKt/issues/220)) ([bc94400](https://github.com/RyuNen344/WebAuthnKt/commit/bc94400a3961f858facab2ac11280a84d2e6e476))
+* **gradle:** bump org.jetbrains.kotlinx:kotlinx-serialization-json from 1.7.2 to 1.7.3 ([#210](https://github.com/RyuNen344/WebAuthnKt/issues/210)) ([d29397d](https://github.com/RyuNen344/WebAuthnKt/commit/d29397d03ad2092ee72b661c94721e4d3c71bb5d))
+* **npm:** bump @types/node from 22.5.4 to 22.5.5 ([#207](https://github.com/RyuNen344/WebAuthnKt/issues/207)) ([d0f3dc7](https://github.com/RyuNen344/WebAuthnKt/commit/d0f3dc7d66d3bd6b8f1193de16748388b19cf4c3))
+* **npm:** bump @types/node from 22.5.5 to 22.6.1 ([#211](https://github.com/RyuNen344/WebAuthnKt/issues/211)) ([5c0208e](https://github.com/RyuNen344/WebAuthnKt/commit/5c0208e3564aa0dd3063584aff0f8b2f1fc5f807))
+* **npm:** bump @types/node from 22.6.1 to 22.6.2 ([#213](https://github.com/RyuNen344/WebAuthnKt/issues/213)) ([be86602](https://github.com/RyuNen344/WebAuthnKt/commit/be86602f8c8246a0fc9b037ef04b223401223778))
+* **npm:** bump @types/node from 22.6.2 to 22.7.2 ([#214](https://github.com/RyuNen344/WebAuthnKt/issues/214)) ([d4438eb](https://github.com/RyuNen344/WebAuthnKt/commit/d4438eb377bcf55ec6cc18f431bb5a19ab658ff5))
+* **npm:** bump @types/node from 22.7.2 to 22.7.3 ([#215](https://github.com/RyuNen344/WebAuthnKt/issues/215)) ([e4502cb](https://github.com/RyuNen344/WebAuthnKt/commit/e4502cb5050c4aea2c824abfa2ea692003d68d54))
+* **npm:** bump @types/node from 22.7.3 to 22.7.4 ([#216](https://github.com/RyuNen344/WebAuthnKt/issues/216)) ([95c8eb1](https://github.com/RyuNen344/WebAuthnKt/commit/95c8eb1a88e9391c6ba2fcf9fccf4b4938219c4d))
+* **npm:** bump @types/node from 22.7.4 to 22.7.5 ([#221](https://github.com/RyuNen344/WebAuthnKt/issues/221)) ([eeebfc6](https://github.com/RyuNen344/WebAuthnKt/commit/eeebfc6089e00279a5e8fa3f81c9d0d75ce76efd))
+* **npm:** bump typescript from 5.6.2 to 5.6.3 ([#222](https://github.com/RyuNen344/WebAuthnKt/issues/222)) ([51b292f](https://github.com/RyuNen344/WebAuthnKt/commit/51b292f7aeee1b7baaad5e4e3861d1fe6420260c))
+
+
+### Chores
+
+* **actions:** check composite actions ([b7958da](https://github.com/RyuNen344/WebAuthnKt/commit/b7958da2ade3c01c0db0e9fd697efadad48f82e9))
+* **actions:** remove redundant dependency report json ([d1e9955](https://github.com/RyuNen344/WebAuthnKt/commit/d1e995525307cb160889f121bef2494223ef7496))
+* **actions:** skip toolchain task ([#204](https://github.com/RyuNen344/WebAuthnKt/issues/204)) ([49234db](https://github.com/RyuNen344/WebAuthnKt/commit/49234db1b8dd1b623e0c665723366c164cf26939))
+* **actions:** workflow_dispatch on stability workflow ([#206](https://github.com/RyuNen344/WebAuthnKt/issues/206)) ([327a645](https://github.com/RyuNen344/WebAuthnKt/commit/327a6450e7b4afe120dba0576a540a296639e84b))
+* **gradle:** bump gradle wrapper ([#219](https://github.com/RyuNen344/WebAuthnKt/issues/219)) ([691d138](https://github.com/RyuNen344/WebAuthnKt/commit/691d138c783ed59568812e4028ac125b1a6434ac))
+* **gradle:** update gradle wrapper ([#205](https://github.com/RyuNen344/WebAuthnKt/issues/205)) ([482843a](https://github.com/RyuNen344/WebAuthnKt/commit/482843aa2481969cc02ab38f5b74b9343755c436))
+
 ## [1.1.0-alpha01](https://github.com/RyuNen344/WebAuthnKt/compare/1.0.1...1.1.0-alpha01) (2024-09-10)
 
 
