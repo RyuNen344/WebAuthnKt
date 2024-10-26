@@ -12,8 +12,8 @@ updates:
     groups:
       kotlin:
         patterns:
-          - "kotlin"
-          - "com.google.devtools.ksp"
+          - "org.jetbrains.kotlin*"
+          - "com.google.devtools.ksp*"
 
   - package-ecosystem: "npm"
     directory: "/"
