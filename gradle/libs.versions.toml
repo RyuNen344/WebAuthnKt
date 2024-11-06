@@ -11,7 +11,7 @@ junit = "4.13.2"
 kotlin = "2.0.21"
 kotlinx-serialization-json = "1.7.3"
 moshi = "1.15.1"
-equalsverifier = "3.17.1"
+equalsverifier = "3.17.2"
 org-robolectric = "4.13"
 
 [libraries]
