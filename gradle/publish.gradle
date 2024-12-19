@@ -37,8 +37,6 @@ afterEvaluate {
         extension = "spdx.json"
         builtBy(sbomTask)
     }
-    // publish sbomArtifact
-    print("publish sbomArtifact: ${sbomArtifact}")
 
     publishing {
         publications {
