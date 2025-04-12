@@ -24,6 +24,7 @@ jobs:
           fetch-depth: 0
       - uses: JetBrains/qodana-action@v2024.3
         with:
+          args: '-l,jetbrains/qodana-jvm-android'
           cache-default-branch-only: true
           use-annotations: false
           pr-mode: false
