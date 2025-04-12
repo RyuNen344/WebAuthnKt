@@ -35,7 +35,7 @@ jobs:
       - name: check dependency graph(checksum)
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 resolveAllDependencies --dry-run --scan
+          ./gradlew --write-verification-metadata sha256 resolveAllDependencies testDebugUnitTest publishReleasePublicationToLocalRepository --dry-run --scan
       - name: check verification-metadata.xml diff(checksum)
         if: ${{ !cancelled() }}
         shell: bash
@@ -53,7 +53,7 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata pgp,sha256 resolveAllDependencies --dry-run --scan
+          ./gradlew --write-verification-metadata pgp,sha256 resolveAllDependencies testDebugUnitTest publishReleasePublicationToLocalRepository --dry-run --scan
       - name: check verification-metadata.xml diff(signature)
         if: ${{ !cancelled() }}
         shell: bash
