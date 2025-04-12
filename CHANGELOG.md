@@ -1,5 +1,60 @@
 # Changelog
 
+## [1.1.0](https://github.com/RyuNen344/WebAuthnKt/compare/1.1.0-alpha02...1.1.0) (2025-04-12)
+
+
+### Dependency Updates
+
+* **github-actions:** bump JetBrains/qodana-action from 2023.3 to 2024.3 ([#272](https://github.com/RyuNen344/WebAuthnKt/issues/272)) ([f25b86d](https://github.com/RyuNen344/WebAuthnKt/commit/f25b86dc215a08bb5c5d2badf6c443a11e5abbef))
+* **gradle:** bump agp from 8.7.3 to 8.9.1 ([#317](https://github.com/RyuNen344/WebAuthnKt/issues/317)) ([aaf8309](https://github.com/RyuNen344/WebAuthnKt/commit/aaf8309eee359e61ece94cec90598148e406534d))
+* **gradle:** bump com.android.tools:desugar_jdk_libs from 2.1.3 to 2.1.5 ([#304](https://github.com/RyuNen344/WebAuthnKt/issues/304)) ([e075476](https://github.com/RyuNen344/WebAuthnKt/commit/e0754764b5f3bc8310d2470f72a2126d62605699))
+* **gradle:** bump com.fasterxml.jackson.core:jackson-databind ([#309](https://github.com/RyuNen344/WebAuthnKt/issues/309)) ([454ee67](https://github.com/RyuNen344/WebAuthnKt/commit/454ee67775d78c257f6e1708ecc851b173f0bdae))
+* **gradle:** bump com.gradle.develocity from 3.19 to 4.0 ([#323](https://github.com/RyuNen344/WebAuthnKt/issues/323)) ([d52b9e1](https://github.com/RyuNen344/WebAuthnKt/commit/d52b9e13aa364c0a870b3a986b85a67e6ff361ab))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#274](https://github.com/RyuNen344/WebAuthnKt/issues/274)) ([a687eaa](https://github.com/RyuNen344/WebAuthnKt/commit/a687eaa9a593a85b736720fb9f537d1a506afba3))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#281](https://github.com/RyuNen344/WebAuthnKt/issues/281)) ([b463590](https://github.com/RyuNen344/WebAuthnKt/commit/b463590f47e7da5901f9cbabf7899be577f83707))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#291](https://github.com/RyuNen344/WebAuthnKt/issues/291)) ([99a5f4f](https://github.com/RyuNen344/WebAuthnKt/commit/99a5f4f4931e115b0e59b80dead98e811542b5a9))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#294](https://github.com/RyuNen344/WebAuthnKt/issues/294)) ([fa66bfd](https://github.com/RyuNen344/WebAuthnKt/commit/fa66bfd10a122187aa45427f6b389b9785da43be))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#300](https://github.com/RyuNen344/WebAuthnKt/issues/300)) ([7c1564d](https://github.com/RyuNen344/WebAuthnKt/commit/7c1564dd9c3eeb8cc1a4b5dd2d77f7a1479970e5))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier ([#314](https://github.com/RyuNen344/WebAuthnKt/issues/314)) ([1c72d1a](https://github.com/RyuNen344/WebAuthnKt/commit/1c72d1af09f3b4c2e91884912a385aa8e0144bd6))
+* **gradle:** bump org.spdx.sbom from 0.8.0 to 0.9.0 ([#320](https://github.com/RyuNen344/WebAuthnKt/issues/320)) ([9ed0c0d](https://github.com/RyuNen344/WebAuthnKt/commit/9ed0c0d3776549b8f35c6a3c733ac0a9dd7ffa99))
+* **gradle:** bump the kotlin group across 1 directory with 5 updates ([#306](https://github.com/RyuNen344/WebAuthnKt/issues/306)) ([5007600](https://github.com/RyuNen344/WebAuthnKt/commit/5007600339033ed4351ee6bda6229d30152b3332))
+* **npm:** bump @simplewebauthn/server from 13.0.0 to 13.1.0 ([#283](https://github.com/RyuNen344/WebAuthnKt/issues/283)) ([a812730](https://github.com/RyuNen344/WebAuthnKt/commit/a812730f929b2f61fd2edbcb2cac26cdb5539754))
+* **npm:** bump @simplewebauthn/server from 13.1.0 to 13.1.1 ([#287](https://github.com/RyuNen344/WebAuthnKt/issues/287)) ([7d4fb2a](https://github.com/RyuNen344/WebAuthnKt/commit/7d4fb2aa8cb3d36f70568efe602823ff69cbc1d1))
+* **npm:** bump @types/node from 22.10.10 to 22.12.0 ([#290](https://github.com/RyuNen344/WebAuthnKt/issues/290)) ([48eaa1f](https://github.com/RyuNen344/WebAuthnKt/commit/48eaa1fef24fc5baafa9c4220311fa7f7c2bfeea))
+* **npm:** bump @types/node from 22.10.2 to 22.10.3 ([#275](https://github.com/RyuNen344/WebAuthnKt/issues/275)) ([90cf25b](https://github.com/RyuNen344/WebAuthnKt/commit/90cf25b5c121fe1dd55ee26f6e7e00f15f55e16b))
+* **npm:** bump @types/node from 22.10.3 to 22.10.4 ([#276](https://github.com/RyuNen344/WebAuthnKt/issues/276)) ([cf6acff](https://github.com/RyuNen344/WebAuthnKt/commit/cf6acff60eff79820f0271715192c922eaa42423))
+* **npm:** bump @types/node from 22.10.4 to 22.10.5 ([#277](https://github.com/RyuNen344/WebAuthnKt/issues/277)) ([02857a5](https://github.com/RyuNen344/WebAuthnKt/commit/02857a543995e38d4f9bddf19b60c0213d65c6d4))
+* **npm:** bump @types/node from 22.10.5 to 22.10.6 ([#282](https://github.com/RyuNen344/WebAuthnKt/issues/282)) ([e3ef9a1](https://github.com/RyuNen344/WebAuthnKt/commit/e3ef9a1f40c50d6c666bb73ba3813133e9d7a21c))
+* **npm:** bump @types/node from 22.10.6 to 22.10.7 ([#284](https://github.com/RyuNen344/WebAuthnKt/issues/284)) ([c26d4dc](https://github.com/RyuNen344/WebAuthnKt/commit/c26d4dcd2d27ad4a3a82ba1523e2c848831945f3))
+* **npm:** bump @types/node from 22.10.7 to 22.10.10 ([#285](https://github.com/RyuNen344/WebAuthnKt/issues/285)) ([ae7a974](https://github.com/RyuNen344/WebAuthnKt/commit/ae7a97414e7ba41e915721fd973194d0bdc332dd))
+* **npm:** bump @types/node from 22.12.0 to 22.13.0 ([#292](https://github.com/RyuNen344/WebAuthnKt/issues/292)) ([9927472](https://github.com/RyuNen344/WebAuthnKt/commit/9927472b0473e552798220c64dd7ede9eb3569f5))
+* **npm:** bump @types/node from 22.13.0 to 22.13.1 ([#293](https://github.com/RyuNen344/WebAuthnKt/issues/293)) ([e4182ac](https://github.com/RyuNen344/WebAuthnKt/commit/e4182acd0068f3c21bfb67f4e100821bd1109355))
+* **npm:** bump @types/node from 22.13.1 to 22.13.4 ([#297](https://github.com/RyuNen344/WebAuthnKt/issues/297)) ([d4bcbc3](https://github.com/RyuNen344/WebAuthnKt/commit/d4bcbc301af4abeec545fddad1ca965a4f2321e1))
+* **npm:** bump @types/node from 22.13.10 to 22.13.11 ([#315](https://github.com/RyuNen344/WebAuthnKt/issues/315)) ([3ebe352](https://github.com/RyuNen344/WebAuthnKt/commit/3ebe35241126a35ca182de6036fbca3e9fdecfd9))
+* **npm:** bump @types/node from 22.13.11 to 22.13.13 ([#316](https://github.com/RyuNen344/WebAuthnKt/issues/316)) ([c6711ba](https://github.com/RyuNen344/WebAuthnKt/commit/c6711ba136e9722fed9dd7d109a2a89c5631ef41))
+* **npm:** bump @types/node from 22.13.13 to 22.13.14 ([#318](https://github.com/RyuNen344/WebAuthnKt/issues/318)) ([2721915](https://github.com/RyuNen344/WebAuthnKt/commit/272191573c7ad1e656befe46178636b7111f0227))
+* **npm:** bump @types/node from 22.13.14 to 22.13.17 ([#319](https://github.com/RyuNen344/WebAuthnKt/issues/319)) ([17f6572](https://github.com/RyuNen344/WebAuthnKt/commit/17f65726938ec3581cd8dfd4278f0801949f8179))
+* **npm:** bump @types/node from 22.13.17 to 22.14.0 ([#321](https://github.com/RyuNen344/WebAuthnKt/issues/321)) ([e9f0f23](https://github.com/RyuNen344/WebAuthnKt/commit/e9f0f2366e2c9fddabad553a8266aef859331f89))
+* **npm:** bump @types/node from 22.13.4 to 22.13.5 ([#302](https://github.com/RyuNen344/WebAuthnKt/issues/302)) ([45a17f4](https://github.com/RyuNen344/WebAuthnKt/commit/45a17f4e72d22d89078623c6b2666c8a769a54c3))
+* **npm:** bump @types/node from 22.13.5 to 22.13.8 ([#307](https://github.com/RyuNen344/WebAuthnKt/issues/307)) ([f42ca4e](https://github.com/RyuNen344/WebAuthnKt/commit/f42ca4e2191a57c3d63846cd0a7b10d79bd40c75))
+* **npm:** bump @types/node from 22.13.8 to 22.13.9 ([#311](https://github.com/RyuNen344/WebAuthnKt/issues/311)) ([d256359](https://github.com/RyuNen344/WebAuthnKt/commit/d2563592d289b4afae5c09f834cd12b537733600))
+* **npm:** bump @types/node from 22.13.9 to 22.13.10 ([#313](https://github.com/RyuNen344/WebAuthnKt/issues/313)) ([28f4aac](https://github.com/RyuNen344/WebAuthnKt/commit/28f4aacf49533efed301cda2d7056c98cb03d6fa))
+* **npm:** bump prettier from 3.4.2 to 3.5.0 ([#295](https://github.com/RyuNen344/WebAuthnKt/issues/295)) ([8dd349e](https://github.com/RyuNen344/WebAuthnKt/commit/8dd349efa1d01f1106ce45f1c2b9c33fcc9f0d61))
+* **npm:** bump prettier from 3.5.0 to 3.5.1 ([#298](https://github.com/RyuNen344/WebAuthnKt/issues/298)) ([81b848c](https://github.com/RyuNen344/WebAuthnKt/commit/81b848cdf68915d54c4987eaf5a023d19d2c51b3))
+* **npm:** bump prettier from 3.5.1 to 3.5.2 ([#303](https://github.com/RyuNen344/WebAuthnKt/issues/303)) ([8a66231](https://github.com/RyuNen344/WebAuthnKt/commit/8a662315f4a245835d24f8dcc2846d22b2d715aa))
+* **npm:** bump prettier from 3.5.2 to 3.5.3 ([#310](https://github.com/RyuNen344/WebAuthnKt/issues/310)) ([92e6deb](https://github.com/RyuNen344/WebAuthnKt/commit/92e6deb5a4236a95738e87cacaf39f7827bf4396))
+* **npm:** bump typescript from 5.7.2 to 5.7.3 ([#279](https://github.com/RyuNen344/WebAuthnKt/issues/279)) ([d0796d0](https://github.com/RyuNen344/WebAuthnKt/commit/d0796d04fc756e5e4c7c9b6cff9fcc9664149d5d))
+* **npm:** bump typescript from 5.7.3 to 5.8.2 ([#308](https://github.com/RyuNen344/WebAuthnKt/issues/308)) ([68c456e](https://github.com/RyuNen344/WebAuthnKt/commit/68c456e395291ab22137abeb5ca51ce06707c068))
+* **npm:** bump typescript from 5.8.2 to 5.8.3 ([#322](https://github.com/RyuNen344/WebAuthnKt/issues/322)) ([f5537f2](https://github.com/RyuNen344/WebAuthnKt/commit/f5537f2a53ccb3ab5841f88a027e041de81f3bb6))
+
+
+### Chores
+
+* bump node version ([#326](https://github.com/RyuNen344/WebAuthnKt/issues/326)) ([b3e29e4](https://github.com/RyuNen344/WebAuthnKt/commit/b3e29e4a183f38d44fa8647c77759c882909273a))
+* **gradle:** bump gradle version ([#328](https://github.com/RyuNen344/WebAuthnKt/issues/328)) ([f7ec3e1](https://github.com/RyuNen344/WebAuthnKt/commit/f7ec3e135a5c8a9ce0c18de00cf28ae6674692df))
+* release 1.1.0 ([#327](https://github.com/RyuNen344/WebAuthnKt/issues/327)) ([ce6e7d4](https://github.com/RyuNen344/WebAuthnKt/commit/ce6e7d412c3715797a7b37dd137278641fbe9da7))
+* update gitignore ([#324](https://github.com/RyuNen344/WebAuthnKt/issues/324)) ([5aca2e5](https://github.com/RyuNen344/WebAuthnKt/commit/5aca2e5321391ed1d76546cbce7f6397b548c2a9))
+
 ## [1.1.0-alpha02](https://github.com/RyuNen344/WebAuthnKt/compare/1.1.0-alpha01...1.1.0-alpha02) (2024-12-19)
 
 
