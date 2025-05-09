@@ -33,7 +33,7 @@ org-robolectric-robolectric = { group = "org.robolectric", name = "robolectric",
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
-com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.1.20-2.0.0" }
+com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.1.20-2.0.1" }
 nexus-publish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
