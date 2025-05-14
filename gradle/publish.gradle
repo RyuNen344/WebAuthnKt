@@ -1,15 +1,15 @@
-pluginManager.apply("maven-publish")
+pluginManager.apply("com.vanniktech.maven.publish")
 pluginManager.apply("signing")
 pluginManager.apply("org.spdx.sbom")
 
 def localProperty = new Properties()
-def localPropertyFile = new File(rootDir, "local.properties")
+def localPropertyFile = layout.settingsDirectory.file("local.properties").asFile
 if (localPropertyFile.exists()) {
     localProperty.load(localPropertyFile.newDataInputStream())
 }
 
 group = "io.github.ryunen344.webauthn"
-version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.getOrElse("snapshot").trim()
+version = providers.fileContents(layout.settingsDirectory.file("version.txt")).asText.getOrElse("snapshot").trim()
 description = project.findProperty("POM_DESCRIPTION")
 
 spdxSbom {
@@ -30,49 +30,50 @@ spdxSbom {
 }
 
 afterEvaluate {
-    def sbomTask = tasks.getByName("spdxSbomForRelease")
+    def sbomTask = tasks.named("spdxSbomForRelease")
     def sbomCfg = configurations.maybeCreate("spdxSbomForRelease")
-    def sbomArtifact = artifacts.add(sbomCfg.name, sbomTask.outputs.files.singleFile) {
+    def sbomArtifact = artifacts.add(sbomCfg.name, sbomTask.get().outputs.files.singleFile) {
         type = "sbom"
         extension = "spdx.json"
         builtBy(sbomTask)
     }
 
-    publishing {
-        publications {
-            release(MavenPublication) {
-                pom {
-                    name.set(project.findProperty("POM_NAME"))
-                    description.set(project.findProperty("POM_DESCRIPTION"))
-                    url.set("https://github.com/RyuNen344/WebAuthnKt")
-                    licenses {
-                        license {
-                            name.set("Apache License 2.0")
-                            url.set("https://github.com/RyuNen344/WebAuthnKt/blob/main/LICENSE")
-                            distribution.set("repo")
-                        }
-                    }
-                    developers {
-                        developer {
-                            id.set("RyuNen344")
-                            name.set("RyuNen344")
-                            email.set("s1100633@outlook.com")
-                        }
-                    }
-                    scm {
-                        connection.set("scm:git://github.com/RyuNen344/WebAuthnKt.git")
-                        developerConnection.set("scm:git:ssh://github.com/RyuNen344/WebAuthnKt.git")
-                        url.set("https://github.com/RyuNen344/WebAuthnKt")
-                    }
+    mavenPublishing {
+        pom {
+            inceptionYear = "2023"
+            url = "https://github.com/RyuNen344/WebAuthnKt"
+            licenses {
+                license {
+                    name = "Apache-2.0"
+                    url = "https://github.com/RyuNen344/WebAuthnKt/blob/main/LICENSE"
+                    distribution = "repo"
                 }
-                from components.release
-                artifact sbomArtifact
             }
+            developers {
+                developer {
+                    id = "RyuNen344"
+                    name = "RyuNen344"
+                    email = "s1100633@outlook.com"
+                }
+            }
+            scm {
+                url = "https://github.com/RyuNen344/WebAuthnKt"
+                connection = "scm:git://github.com/RyuNen344/WebAuthnKt.git"
+                developerConnection = "scm:git:ssh://github.com/RyuNen344/WebAuthnKt.git"
+            }
+        }
+
+        publishToMavenCentral("CENTRAL_PORTAL")
+    }
+
+    publishing {
+        publications.configureEach {
+            it.artifact sbomArtifact
         }
         repositories {
             maven {
                 name = "Local"
-                setUrl(rootProject.layout.projectDirectory.dir("releases/maven"))
+                setUrl(layout.settingsDirectory.dir("releases/maven"))
             }
         }
     }

@@ -24,7 +24,7 @@ jobs:
       - name: check dependency graph(checksum)
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata sha256 resolveAllDependencies testDebugUnitTest publishReleasePublicationToLocalRepository --dry-run --scan
+          ./gradlew --write-verification-metadata sha256 resolveAllDependencies testDebugUnitTest publishAndReleaseToMavenCentral --dry-run --no-configuration-cache --scan
       - name: check verification-metadata.xml diff(checksum)
         if: ${{ !cancelled() }}
         shell: bash
@@ -42,7 +42,7 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
         run: |
-          ./gradlew --write-verification-metadata pgp,sha256 resolveAllDependencies testDebugUnitTest publishReleasePublicationToLocalRepository --dry-run --scan
+          ./gradlew --write-verification-metadata pgp,sha256 resolveAllDependencies testDebugUnitTest publishAndReleaseToMavenCentral --dry-run --no-configuration-cache --scan
       - name: check verification-metadata.xml diff(signature)
         if: ${{ !cancelled() }}
         shell: bash
@@ -66,7 +66,7 @@ jobs:
       - name: check publish task
         shell: bash
         run: |
-          ./gradlew publishReleasePublicationToLocalRepository --scan
+          ./gradlew publishAllPublicationsToLocalRepository --no-configuration-cache --scan
 
   test:
     runs-on: ubuntu-latest
