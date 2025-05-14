@@ -31,7 +31,7 @@ jobs:
       - name: check publish task
         shell: bash
         run: |
-          ./gradlew publishReleasePublicationToLocalRepository --scan
+          ./gradlew publishAllPublicationsToLocalRepository --no-configuration-cache  --scan
 
   test:
     runs-on: ubuntu-latest

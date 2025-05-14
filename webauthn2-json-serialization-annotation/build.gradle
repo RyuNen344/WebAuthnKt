@@ -4,8 +4,8 @@ plugins {
     alias libs.plugins.org.jetbrains.kotlinx.compatibility
 }
 
-apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
-apply from: rootProject.layout.projectDirectory.file("gradle/annotation.gradle")
+apply from: layout.settingsDirectory.file("gradle/android.gradle")
+apply from: layout.settingsDirectory.file("gradle/annotation.gradle")
 
 android.namespace = "io.github.ryunen344.webauthn2.json.serialization.annotation"
 
