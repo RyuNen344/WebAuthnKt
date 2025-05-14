@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.1.1](https://github.com/RyuNen344/WebAuthnKt/compare/1.1.0...1.1.1) (2025-05-14)
+
+
+### Dependency Updates
+
+* **github-actions:** bump madrapps/jacoco-report from 1.7.1 to 1.7.2 ([#341](https://github.com/RyuNen344/WebAuthnKt/issues/341)) ([4f248de](https://github.com/RyuNen344/WebAuthnKt/commit/4f248de2b6556ccddcb9b4797c885caca8f67e11))
+* **gradle:** bump agp from 8.9.1 to 8.10.0 ([#346](https://github.com/RyuNen344/WebAuthnKt/issues/346)) ([59769e7](https://github.com/RyuNen344/WebAuthnKt/commit/59769e75cc8ed3065bb9db07422550629ec21dd9))
+* **gradle:** bump com.fasterxml.jackson.core:jackson-databind from 2.18.3 to 2.19.0 ([#332](https://github.com/RyuNen344/WebAuthnKt/issues/332)) ([dfaafb3](https://github.com/RyuNen344/WebAuthnKt/commit/dfaafb3734e10371f2502b622c76f3cb7452df59))
+* **gradle:** bump com.gradle.develocity from 4.0 to 4.0.1 ([#335](https://github.com/RyuNen344/WebAuthnKt/issues/335)) ([e15b7e7](https://github.com/RyuNen344/WebAuthnKt/commit/e15b7e703a598266623dfcfcf56ad2e50ace6ee9))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier from 3.19.2 to 3.19.3 ([#329](https://github.com/RyuNen344/WebAuthnKt/issues/329)) ([10216f3](https://github.com/RyuNen344/WebAuthnKt/commit/10216f339f66c9008a8abd657856d5cd834e5193))
+* **gradle:** bump nl.jqno.equalsverifier:equalsverifier from 3.19.3 to 4.0 ([#340](https://github.com/RyuNen344/WebAuthnKt/issues/340)) ([9f5e1ea](https://github.com/RyuNen344/WebAuthnKt/commit/9f5e1ea90f5e7ca01c74366c14b18cc37a32212e))
+* **gradle:** bump the kotlin group across 1 directory with 4 updates ([#347](https://github.com/RyuNen344/WebAuthnKt/issues/347)) ([13d1ab9](https://github.com/RyuNen344/WebAuthnKt/commit/13d1ab93eab52e7dfe421c857a9f9cb12d53968d))
+* **npm:** bump @types/node from 22.14.0 to 22.14.1 ([#330](https://github.com/RyuNen344/WebAuthnKt/issues/330)) ([abffdf0](https://github.com/RyuNen344/WebAuthnKt/commit/abffdf0e58d857d7c23550cd6122b535bd072697))
+* **npm:** bump @types/node from 22.14.1 to 22.15.0 ([#333](https://github.com/RyuNen344/WebAuthnKt/issues/333)) ([9388382](https://github.com/RyuNen344/WebAuthnKt/commit/9388382aa568a0340321354f88f718bb32467fd1))
+* **npm:** bump @types/node from 22.15.0 to 22.15.2 ([#334](https://github.com/RyuNen344/WebAuthnKt/issues/334)) ([881771f](https://github.com/RyuNen344/WebAuthnKt/commit/881771fae89d0a28ae3c5cf701e09f1f17cb33eb))
+* **npm:** bump @types/node from 22.15.14 to 22.15.15 ([#343](https://github.com/RyuNen344/WebAuthnKt/issues/343)) ([858f3b0](https://github.com/RyuNen344/WebAuthnKt/commit/858f3b0b0cb9d55c6fca99eea160356c402580c1))
+* **npm:** bump @types/node from 22.15.15 to 22.15.17 ([#344](https://github.com/RyuNen344/WebAuthnKt/issues/344)) ([df3628e](https://github.com/RyuNen344/WebAuthnKt/commit/df3628ed684f722bca5c51ca66621a987dcdc573))
+* **npm:** bump @types/node from 22.15.2 to 22.15.3 ([#336](https://github.com/RyuNen344/WebAuthnKt/issues/336)) ([5940c11](https://github.com/RyuNen344/WebAuthnKt/commit/5940c1160525f39b378ad5739bfde36cd278c332))
+* **npm:** bump @types/node from 22.15.3 to 22.15.9 ([#339](https://github.com/RyuNen344/WebAuthnKt/issues/339)) ([3a3147f](https://github.com/RyuNen344/WebAuthnKt/commit/3a3147f651ea36155e09ba0698e94449b0463247))
+* **npm:** bump @types/node from 22.15.9 to 22.15.14 ([#342](https://github.com/RyuNen344/WebAuthnKt/issues/342)) ([b7baea5](https://github.com/RyuNen344/WebAuthnKt/commit/b7baea5acf194641aca84d2ea6cdc6a3d90b5b48))
+
+
+### Chores
+
+* update idea files ([#348](https://github.com/RyuNen344/WebAuthnKt/issues/348)) ([f30509d](https://github.com/RyuNen344/WebAuthnKt/commit/f30509da91ae87674a1fe6b56e7c66e6fd0c4abb))
+* update publishing configuration to use vanniktech.maven.publish plugin ([#349](https://github.com/RyuNen344/WebAuthnKt/issues/349)) ([4e2de59](https://github.com/RyuNen344/WebAuthnKt/commit/4e2de59093ed7c23bd85dbd8d56fc35927ac55b7))
+
 ## [1.1.0](https://github.com/RyuNen344/WebAuthnKt/compare/1.1.0-alpha02...1.1.0) (2025-04-12)
 
 
