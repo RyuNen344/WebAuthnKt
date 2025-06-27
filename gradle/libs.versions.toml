@@ -34,7 +34,7 @@ org-robolectric-robolectric = { group = "org.robolectric", name = "robolectric",
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
 com-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "2.1.21-2.0.2" }
-com-vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version = "0.32.0" }
+com-vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version = "0.33.0" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 org-jetbrains-kotlinx-compatibility = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version = "0.17.0" }
