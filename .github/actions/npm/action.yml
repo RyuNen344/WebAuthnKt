@@ -4,7 +4,7 @@ runs:
   using: "composite"
   steps:
     - name: setup npm
-      uses: actions/setup-node@v5
+      uses: actions/setup-node@v6
       with:
         node-version-file: '.node-version'
 
