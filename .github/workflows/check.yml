@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/java
       - uses: gradle/actions/wrapper-validation@v6
-      - uses: actions/dependency-review-action@v4
+      - uses: actions/dependency-review-action@v5
       - name: check dependency graph(checksum)
         shell: bash
         run: |
