@@ -5,7 +5,7 @@
   },
   "devDependencies": {
     "@github/webauthn-json": "^2.1.1",
-    "@simplewebauthn/server": "^14.0.3",
+    "@simplewebauthn/server": "^14.1.0",
     "@simplewebauthn/types": "^12.0.0",
     "@types/node": "^26.6.6",
     "prettier": "^3.9.10",
